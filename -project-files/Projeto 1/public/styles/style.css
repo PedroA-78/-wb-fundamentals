@@ -18,43 +18,49 @@ body {
     background-position: center right;
 }
 
-header nav {
+.hero nav ul {
     text-align: right;
 }
 
-header nav ul li {
+.hero nav ul li {
     display: inline-block;
-    margin: 24px;
+    margin: 24px 16px;
     border: 1px solid white;
-    width: 80px;
-    padding: 12px;
+    width: 120px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.07);
 }
 
-header nav ul li:last-child {
+.hero nav ul li:last-child {
     margin-right: 64px;
 }
 
-header nav ul li a {
+.hero nav ul li a {
+    display: block;
     text-transform: uppercase;
     text-decoration: none;
     color: white;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
 }
 
-header div {
+.hero nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
     text-align: center;
     margin-top: 80px;
 }
 
-header div h1 {
+.hero-content h1 {
     font-size: 56px;
     text-transform: uppercase;
     color: white;
     text-shadow: 2px 1px 4px black;
 }
 
-header div p {
+.hero-content p {
     display: inline-block;
     padding: 10px;
     margin-top: 16px;
@@ -77,27 +83,33 @@ header div p {
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     padding: 16px;
-    gap: 21px;
+    box-sizing: border-box;
+    overflow: auto;
 }
+
 .card {
-    width: 380px;
+    width: 32%;
+    float: left;
+    /* margin-left: 8px;   */
+}
+
+.card:nth-child(1), .card:nth-child(2) {
+    margin-right: 2%;
 }
 
 .card img {
-    width: 380px;
+    width: 100%;
+    display: block;
 }
 
 .card p {
     text-align: left;
     padding: 8px;
-    color: rgb(128, 128, 128);
     background-color: rgba(78, 78, 78, 0.9);
     color: white;
     text-transform: uppercase;
-    margin-top: -4px;
+    letter-spacing: 1px;
 }
 
 /* === ARTICLE === */
