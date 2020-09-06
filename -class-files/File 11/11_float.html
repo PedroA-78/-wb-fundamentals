@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Float</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        #container {
+            border: 3px solid blue;
+            /* width: 450px; */
+            /* height: 450px; */
+            display: inline-block;
+            padding: 8px;
+            box-sizing: border-box;
+            overflow: auto; /* É uma técnica para que o bloco consiga enchergar a altura dos blocos float */
+        }
+
+        #container div {
+            margin-top: 4px;
+            width: 100px;
+            height: 100px;
+            margin: 8px;
+        }
+
+        #div1 {
+            border: 3px solid red;
+            float: left;
+        }
+
+        #div2 {
+            border: 3px solid yellow;
+            float: left;
+        }
+
+        #div3 {
+            border: 3px solid green;
+            float: left;
+        }
+
+        /* === HR === */
+
+        .hr-container {
+            /* overflow: auto; */
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 8px;
+        }
+
+        header {
+            background-color: blue;
+            height: 50px;
+        }
+
+        nav {
+            background-color: red;
+            width: 25%;
+            height: 50px;
+            float: left;
+        }
+
+        main {
+            background-color: yellow;
+            width: 70%;
+            height: 100px;
+            float: right;
+        }
+
+        footer {
+            background-color: green;
+            height: 50px;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Float</h1>
+    <div id="container">
+        <div id="div1">One</div>
+        <div id="div2">Two</div>
+        <div id="div3">Three</div>
+    </div>
+
+    <hr>
+
+    <div class="hr-container">
+        <header>header</header>
+        <nav>nav</nav>
+        <main>main</main>
+        <footer>footer</footer>
+    </div>
+    
+</body>
+</html>
