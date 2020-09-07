@@ -43,6 +43,11 @@ header nav {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #1e5357;
+    transition: color 300ms ease-out;
+}
+
+.menu ul li a:hover{
+    color: white;
 }
 
 .image-banner {
@@ -71,6 +76,7 @@ header nav {
     margin-top: 24px;
     font-size: 20px;
     color: #777;
+    line-height: 2;
 }
 
 /* === MAIN.CARDS === */
@@ -110,9 +116,10 @@ header nav {
     width: 82%;
     min-height: 300px;
     margin: auto;
+    background-color: #003d52;
     background-image: url(/public/assets/bg_detalhe.png);
-    background-size: cover;
-    background-position: left top;
+    background-repeat: no-repeat;
+    background-position: right bottom;
     padding: 4%;
     box-sizing: border-box;
 }
@@ -142,6 +149,7 @@ header nav {
     font-weight: 700;
     font-size: 20px;
     margin-bottom: 24px;
+    font-style: normal;
 }
 
 /* === FOOTER === */
