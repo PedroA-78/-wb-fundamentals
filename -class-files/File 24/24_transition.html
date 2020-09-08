@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+
+            transition-property: width, height;
+            transition-duration: 1000ms;
+            transition-timing-function: cubic-bezier(0,1.84,1,-1.03);
+            transition-delay: 200ms, 250ms;
+        }
+
+        div:hover {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transition</h1>
+
+    <div>One</div>
+</body>
+</html>
