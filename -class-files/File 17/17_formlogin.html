@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+
+    <style>
+        .form-login {
+            width: 30%;
+            margin: 50px auto 0;
+            font-family: sans-serif;
+        }
+
+        .form-login fieldset {
+            background-color: rgba(0, 0, 0, 0.015);
+        }
+
+        .form-login legend {
+            text-transform: uppercase;
+            font-size: 14px;
+            padding: 8px;
+        }
+
+        .form-login label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 4px;
+        }
+
+        #user, #pass, .form-btn {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px;
+            font-size: 16px;
+            border: none;
+            box-shadow: 0.1px 0.1px 2px black;
+            outline: none;
+        }
+
+        #user:focus, #pass:focus {
+            background-color: rgba(0, 0, 0, 0.005);
+        }
+
+        .form-btn {
+            margin-top: 15px;
+        }
+
+        #user {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form</h1>
+    
+    <form action="#" method="" class="form-login">
+        <fieldset>
+
+            <legend>Login</legend>
+            <label for="user">Usuário</label>
+            <input type="text" id="user" name="user" autofocus>
+
+            <label for="pass">Senha</label>
+            <input type="password" id="pass" name="pass">
+
+            <input type="submit" value="Entrar" class="form-btn">
+
+        </fieldset>
+    </form>
+</body>
+</html>
