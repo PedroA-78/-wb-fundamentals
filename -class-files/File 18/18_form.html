@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Form</h1>
+    
+    <form action="#" method="" class="form-login">
+        <fieldset>
+
+            <legend>Dados pessoais</legend>
+
+            <label>Email</label>
+            <input type="email">
+            <br>
+            <label>Número de filhos</label>
+            <input type="number" min="0">
+            <br>
+            <label>Nascimento</label>
+            <input type="date" min="2000-01-01" max="2099-12-31">
+            <br>
+            <p>Sexo</p>
+            <label>
+                <input type="radio" name="sexo" value="M">
+                Masculino
+            </label>
+            <label>
+                <input type="radio" name="sexo" value="F">
+                Feminino
+            </label>
+            <br>
+            <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+</body>
+</html>
