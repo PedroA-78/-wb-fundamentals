@@ -36,7 +36,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
     color: #787878;
     font-weight: 400;
-    margin: 0 0 1em; /* EM unidade relativa ao tamanho da fonte*/
+    margin: 1em 0; /* EM unidade relativa ao tamanho da fonte*/
 }
 
 h1 {
@@ -91,6 +91,16 @@ pre code {
     display: block;
 }
 
+ul, ol {
+    margin: 0;
+    padding: 0;
+    padding-left: 1.2em;
+}
+
+li {
+    padding-left: 1em;
+}
+
 .header-title {
     font-size: 20px;
     color: rgba(255, 255, 255, 0.5);
@@ -118,4 +128,38 @@ main {
     margin-left: 35%;
     padding: 80px 54px 72px;
     box-sizing: border-box;
+}
+
+.ul-alternate {
+    list-style-type: none;
+    padding-left: 0; 
+}
+
+.ul-alternate li {
+    border-bottom: 2px solid #d8d8d8;
+    padding: 8px 0;
+}
+
+.ul-alternate li:last-child {
+    border-bottom: none;
+}
+
+.ul-icons {
+    list-style-type: none;
+    padding-left: 0; 
+}
+
+.ul-icons li {
+    display: inline-block;
+    font-size: 1.3em;
+    color: #49bf9d;
+}
+
+.row {
+    overflow: auto;
+}
+
+.col-2 {
+    width: 50%;
+    float: left;
 }
