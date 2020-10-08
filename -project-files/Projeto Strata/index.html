@@ -30,40 +30,46 @@
         <section class="recent-container">
                 <h3>Recent Work</h3>
                 <article class="cards">
-                    <div class="card">
-                        <img src="/public/assets/thumbs/01.jpg" alt="Card_1 Image">
-                        <p>Magna sed consequat tempus</p>
-                        <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="card">
+                                <img src="/public/assets/thumbs/01.jpg" alt="Card_1 Image">
+                                <p>Magna sed consequat tempus</p>
+                                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                            </div>
+        
+                            <div class="card">
+                                <img src="/public/assets/thumbs/02.jpg" alt="Card_2 Image">
+                                <p>Ultricies lacinia interdum</p>
+                                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                            </div>
+        
+                            <div class="card">
+                                <img src="/public/assets/thumbs/03.jpg" alt="Card_3 Image">
+                                <p>Tortor metus commodo</p>
+                                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                            </div>
+                        </div>
 
-                    <div class="card">
-                        <img src="/public/assets/thumbs/02.jpg" alt="Card_2 Image">
-                        <p>Ultricies lacinia interdum</p>
-                        <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-                    </div>
+                        <div class="col-2">
+                            <div class="card">
+                                <img src="/public/assets/thumbs/04.jpg" alt="Card_4 Image">
+                                <p>Quam neque phasellus</p>
+                                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                            </div>
 
-                    <div class="card">
-                        <img src="/public/assets/thumbs/03.jpg" alt="Card_3 Image">
-                        <p>Tortor metus commodo</p>
-                        <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-                    </div>
-
-                    <div class="card">
-                        <img src="/public/assets/thumbs/04.jpg" alt="Card_4 Image">
-                        <p>Quam neque phasellus</p>
-                        <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-                    </div>
-
-                    <div class="card">
-                        <img src="/public/assets/thumbs/05.jpg" alt="Card_5 Image">
-                        <p>Nunc enim commodo aliquet</p>
-                        <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-                    </div>
-
-                    <div class="card">
-                        <img src="/public/assets/thumbs/06.jpg" alt="Card_6 Image">
-                        <p>Risus ornare lacinia</p>
-                        <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                            <div class="card">
+                                <img src="/public/assets/thumbs/05.jpg" alt="Card_5 Image">
+                                <p>Nunc enim commodo aliquet</p>
+                                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                            </div>
+        
+                            <div class="card">
+                                <img src="/public/assets/thumbs/06.jpg" alt="Card_6 Image">
+                                <p>Risus ornare lacinia</p>
+                                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                            </div>
+                        </div>
                     </div>
                 </article>
                 <a href="#">Veja Portifolio completo</a>
@@ -74,36 +80,47 @@
             <p>
                 Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.
             </p>
+            <div class="row">
+                <div class="col-2-3">
+                    <form action="#" method="POST">
+                        <div class="row">
+                            <div class="col-2">
+                                <label for="name">Nome</label>
+                                <input type="text" name="name" id="name" placeholder="Nome completo">
+                            </div>
 
-            <form action="#" method="POST">
-                <label for="name">Nome</label>
-                <input type="text" name="name" id="name" placeholder="Nome completo">
+                            <div class="col-2">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                        </div>
+                    
+                        <label for="mensagem">Digite sua mensagem</label>
+                        <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+        
+                        <button type="submit"class="button-default button-default-stroke button-default-big">Enviar</button>
+                    </form> 
+                </div>
 
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-
-                <label for="mensagem">Digite sua mensagem</label>
-                <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
-
-                <button type="submit">Enviar</button>
-            </form> 
-            
-            <address>
-                <p>
-                    <span>Endereço: </span>
-                    1234 Somewhere Rd. Nashville, TN 00000 United States
-                </p>
-
-                <p>
-                    <span>Telefone: </span>
-                    000-000-000
-                </p>
-
-                <p>
-                    <span>Email: </span>
-                    email@server.com
-                </p>
-            </address>
+                <div class="col-1-3">
+                    <address>
+                        <p>
+                            <span>Endereço: </span>
+                            1234 Somewhere Rd. Nashville, TN 00000 United States
+                        </p>
+        
+                        <p>
+                            <span>Telefone: </span>
+                            000-000-000
+                        </p>
+        
+                        <p>
+                            <span>Email: </span>
+                            email@server.com
+                        </p>
+                    </address>
+                </div>
+            </div>
         </section>
 
         <section class="elements-container">
@@ -381,7 +398,7 @@
 
         <section class="image-container">
             <h3>Imagens</h3>
-            <div class="gallery-thumb">
+            <div class="gallery-thumb-full">
                 <img src="/public/assets/fulls/01.jpg" alt="">
             </div>
 
@@ -392,6 +409,9 @@
                 <img src="/public/assets/thumbs/04.jpg" alt="">
                 <img src="/public/assets/thumbs/05.jpg" alt="">
                 <img src="/public/assets/thumbs/06.jpg" alt="">
+                <img src="/public/assets/thumbs/03.jpg" alt="">
+                <img src="/public/assets/thumbs/01.jpg" alt="">
+                <img src="/public/assets/thumbs/02.jpg" alt="">
             </div>
         </section>
 
