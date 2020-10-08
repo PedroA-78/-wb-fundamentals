@@ -163,3 +163,72 @@ main {
     width: 50%;
     float: left;
 }
+
+.button-default {
+    background-color: #49bf9d;
+    border: 2px solid #49bf9d;
+    color: white;
+    padding: 0.75em 1.5em;
+    border-radius: 5px;
+    font-size: 0.8em;
+    display: inline-block;
+}
+
+.button-default-stroke {
+    background-color: white;
+    border-color: #efefef;
+    color: inherit;
+}
+
+.button-default-small {
+    font-size: 0.6em;
+}
+
+.button-default-full {
+    display: block;
+    text-align: center;
+}
+
+.main-table {
+    width: 100%;
+    margin: 0 0 2em 0;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.main-table td {
+    padding: 0.75em;
+}
+
+.main-table th {
+    padding: 0.75em;
+    background-color: #ccc;
+    
+}
+
+.main-table tbody tr td {
+    border-bottom: 1px solid #ccc;
+}
+
+.main-table tbody tr:first-child td {
+    border-top: 2px solid #777;
+}
+
+.main-table tbody tr:nth-child(even) {
+    background-color: #eee;
+}
+
+.main-table tbody tr:last-child td {
+    border-bottom: 2px solid #777;
+}
+
+.table-alternate tbody td{
+    border: 1px solid #ddd;
+}
+
+.table-alternate tbody tr:first-child td,
+.table-alternate tbody tr:last-child td {
+    border: 1px solid #ddd;
+}
+
+
