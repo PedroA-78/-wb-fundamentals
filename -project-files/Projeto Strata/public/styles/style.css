@@ -236,12 +236,26 @@ textarea {
     border-radius: 5px;
     font-size: 0.8em;
     display: inline-block;
+    width: auto;
+    transition: all 500ms;
+    cursor: pointer;
+}
+
+.button-default:hover {
+    background-color: #5ddeb9;
+    border-color: transparent;
 }
 
 .button-default-stroke {
     background-color: white;
     border-color: #efefef;
     color: inherit;
+}
+
+.button-default-stroke:hover {
+    color: #49bf9d;
+    border-color: #49bf9d;
+    background-color: transparent;
 }
 
 .button-default-small {
@@ -318,4 +332,44 @@ input[type="checkbox"] {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 8px;
+}
+
+/* === FLOAT === */
+
+.img-left {
+    float: left;
+    margin: 16px 16px 16px 0;
+    border-radius: 8px;
+}
+
+.img-right {
+    overflow: auto;
+    float: right;
+    margin: 16px 0 16px 16px;
+    border-radius: 8px;
+}
+
+/* === FOOTER === */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 35%;
+    left: 0;
+    padding: 0 54px 72px 0;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.cop li {
+    list-style-type: none;
+}
+
+.ul-icons a{
+    border: none;
+}
+
+.ul-icons i {
+    font-size: 32px;
+    color: #777;
 }
