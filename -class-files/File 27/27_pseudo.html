@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo</title>
+
+    <style>
+        input[type="checkbox"] {
+            width: 100px;
+            height: 100px;
+        }
+
+        input[type="checkbox"]:checked {
+            width: 16px;
+            height: 16px;
+        }
+
+        button:disabled {
+            background-color: blueviolet;
+        }
+
+        p {
+            color: #777;
+        }
+
+        p:empty::before {
+            content: "Lorem Ipsum!";
+        }
+
+        input[type="text"]:focus {
+            background-color: #dedede;
+        }
+
+        a:focus, a:hover {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-h1></h1>
+
+    <label><input type="checkbox" value="Sim"> Aceito os termos</label>
+
+    <hr>
+
+    <button>Go to</button>
+    <button disabled>Back to</button>
+
+    <hr> 
+
+    <p>Parágrafo 1</p>
+    <p> </p>
+    <p></p>
+    
+
+    <hr> 
+
+    <input type="text">
+
+    <hr> 
+
+    <ul>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+    </ul>
+</body>
+</html>
