@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transform</title>
+
+    <style>
+        .divone {
+            width: 150px;
+            height: 150px;
+            background-color: blueviolet;
+            transform: translate(50px, 70px);
+        }
+
+        .divtwo {
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            position: relative;
+            left: 50%;
+        }
+
+        .divthree {
+            width: 50%;
+            overflow: hidden;
+            border: 2px solid black;
+        }
+
+        .divthree_int {
+            background-color: cadetblue;
+            transform: translateX(60%);
+        }
+
+        .divfour {
+            width: 50%;
+            overflow: hidden;
+            border: 2px solid black;
+        }
+
+        .divfour_int {
+            background-color: cadetblue;
+            transform: rotate(-25deg);
+        }
+
+        .divfive {
+            width: 50%;
+            overflow: hidden;
+            border: 2px solid black;
+        }
+
+        .divfive_int {
+            background-color: cadetblue;
+            transform: rotate(25deg);
+            transform-origin: left top;
+        }
+
+        .divsix {
+            width: 50%;
+            overflow: hidden;
+            border: 2px solid black;
+        }
+
+        .divsix_int {
+            background-color: cadetblue;
+            transform: rotate(25deg) translate(10px);
+        }
+
+        .divseven {
+            width: 50%;
+            overflow: hidden;
+            border: 2px solid black;
+        }
+
+        .divseven_int {
+            background-color: cadetblue;
+            transform: translate(15px) rotate(-55deg);
+        }
+
+        .diveight {
+            width: 150px;
+            height: 150px;
+            background-color: chocolate;
+            transform: skewX(9deg) skewY(9deg);
+        }
+
+        .divnine {
+            width: 150px;
+            height: 150px;
+            background-color: aquamarine;
+            transform: scale(1.1, 0.7);
+            transition: all 500ms;
+        }
+
+        .divnine:hover {
+            width: 300px;
+            /* transform: scale(1.7); */
+        }
+    </style>
+</head>
+<body>
+    <h1>Transform</h1>
+
+    <div class="divone"></div>
+    <div class="divtwo"></div>
+    
+    <hr>
+
+    <div class="divthree">
+        <div class="divthree_int">
+            Content
+        </div>
+        <p>
+            Lorem ipsum fringilla nisl maecenas ante inceptos per fusce tempor, elementum primis tempor ultrices proin phasellus dui mattis adipiscing a, porta integer nunc fames eleifend faucibus sagittis interdum.
+        </p>
+    </div>
+
+    <hr>
+
+    <div class="divfour">
+        <div class="divfour_int">
+            Content
+        </div>
+        <p>
+            Lorem ipsum fringilla nisl maecenas ante inceptos per fusce tempor, elementum primis tempor ultrices proin phasellus dui mattis adipiscing a, porta integer nunc fames eleifend faucibus sagittis interdum.
+        </p>
+    </div>
+    
+    <hr>
+
+    <div class="divfive">
+        <div class="divfive_int">
+            Content
+        </div>
+        <p>
+            Lorem ipsum fringilla nisl maecenas ante inceptos per fusce tempor, elementum primis tempor ultrices proin phasellus dui mattis adipiscing a, porta integer nunc fames eleifend faucibus sagittis interdum.
+        </p>
+    </div>
+    
+    <hr>
+
+    <div class="divsix">
+        <div class="divsix_int">
+            Content
+        </div>
+        <p>
+            Lorem ipsum fringilla nisl maecenas ante inceptos per fusce tempor, elementum primis tempor ultrices proin phasellus dui mattis adipiscing a, porta integer nunc fames eleifend faucibus sagittis interdum.
+        </p>
+    </div>
+    
+    <hr>
+
+    <div class="divseven">
+        <div class="divseven_int">
+            Content
+        </div>
+        <p>
+            Lorem ipsum fringilla nisl maecenas ante inceptos per fusce tempor, elementum primis tempor ultrices proin phasellus dui mattis adipiscing a, porta integer nunc fames eleifend faucibus sagittis interdum.
+        </p>
+    </div>
+    
+    <hr>
+
+    <div class="diveight"></div>
+
+    <hr>
+
+    <div class="divnine"></div>
+</body>
+</html>
