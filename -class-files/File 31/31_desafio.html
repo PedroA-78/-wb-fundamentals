@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Desafio</title>
+    <title>Desafio Checkbox</title>
 
     <style>
         body {
             font-family: sans-serif;
+        }
+
+        hr {
+            margin-bottom: 24px;
+        }
+
+        label {
+            margin-right: 8px;
         }
 
         .check {
@@ -37,10 +45,25 @@
             display: none;
         }
 
+        /* === ALTERNATIVA ACEITANDO O TAB === */
+
+        /* input[type="checkbox"] {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
+        label input:focus + .check {
+            box-shadow: 0 0 0 1px black;
+        } */
+
     </style>
 </head>
 <body>
-    <h1>Desafio</h1>
+    <h1>Desafio Checkbox</h1>
+
+    <hr>
 
     <label>
         <input type="checkbox">
