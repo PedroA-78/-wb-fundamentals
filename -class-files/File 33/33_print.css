@@ -1,0 +1,12 @@
+p {
+    font-family: serif;
+    font-size: 16px;
+    color: black;
+    line-height: 1.5;
+}
+
+a::after {
+    content: "( " attr(href) " )"; /* Faz com que o link do href apareça na impressão */
+    display: inline-block;
+    margin: 0 10px;
+}
