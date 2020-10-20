@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --main-color: #622a76;
-    --second-color: #783292;
-    --third-color: #51b9c7;
+    --main-color: #612674;
+    --second-color: #7c3792;
+    --third-color: #58c4c4;
 }
 
 * {
@@ -19,8 +19,8 @@ body {
 
 /* === HEADER === */
 
-.img_logo {
-    text-align: center;    
+header {
+    text-align: center;
 }
 
 .nav_container {
@@ -41,10 +41,10 @@ body {
 .nav_container ul li a {
     color: white;
     text-decoration: none;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.1em;
     display: inline-block;
     width: 95%;
-    padding: 16px;
+    padding: 1em;
     box-sizing: border-box;
     transition: all 200ms;
 }
@@ -69,54 +69,58 @@ body {
 /* === FIRST SECTION == */
 
 .first_container {
-    margin-top: 32px;
+    margin-top: 2em;
     text-align: center;
     color: var(--main-color);
 }
 
 .first_container div h2 {
-    font-size: 16px;
+    font-size: 1em;
     width: 90%;
-    margin: 24px auto;
+    margin: 1.5em auto;
     color: var(--second-color);
+    line-height: 1.5;
 }
 
 .button-default {
     display: inline-block;
     background-color: var(--third-color);
-    width: 184px;
-    padding: 16px;
-    box-sizing: border-box;
+    padding: 1em 2em;
     border-radius: 8px;
     text-decoration: none;
     color: white;
     text-align: center;
 }
 
+.button-default:hover {
+    background-color: #37a0a0;
+}
+
 
 
 /* === SECOND SECTION === */
 
-span {
+.spiv {
     width: 90%;
-    margin: 24px auto;
+    margin: 1.5em auto;
     display: block;
     border-bottom: 2px solid var(--second-color);
 }
 
 .second_container {
     text-align: center;
-    margin-top: 32px;
+    margin-top: 2em;
 }
 
 .info_container {
-    margin: 48px 0;
+    margin: 3em 0;
 }
 
-.fas {
+.second_container span[class^="icon"] {
     color: var(--main-color);
-    font-size: 56px;
-    margin-bottom: 16px;
+    font-size: 2.5em;
+    display: inline-block;
+    margin-bottom: 0.2em;
 }
 
 .info_title {
@@ -124,12 +128,13 @@ span {
     font-weight: normal;
     letter-spacing: 2px;
     color: var(--second-color);
-    margin-bottom: 8px;
+    margin-bottom: 0.5em;
 }
 
 .info {
     width: 90%;
     margin: auto;
+    line-height: 1.5;
 }
 
 
@@ -142,7 +147,7 @@ span {
 }
 
 .third_info_container {
-    margin: 48px 0;
+    margin: 2.5em 0;
 }
 
 .third_info_title {
@@ -150,50 +155,55 @@ span {
     font-weight: normal;
     letter-spacing: 2px;
     color: var(--second-color);
-    margin-bottom: 16px;
+    margin-bottom: 1em;
+}
+
+.third_info {
+    line-height: 1.5;
 }
 
 .third_button {
-    margin-top: 16px;
+    margin-top: 1em;
 }
 
 /* === FOOTER === */
+
+footer {
+    background-color: #25303e;
+    text-align: center;
+}
 
 footer div ul {
     text-align: center;
     width: 100%;
     margin: auto;
-    background-color: #21334e;
-    padding: 8px;
+    background-color: #303d4c;
+    padding: 0.5em;
     box-sizing: border-box;
+    list-style: none;
 }
 
 footer div ul li{
     display: inline-block;
+    margin: 0 1em;
 }
 
-.fab {
-    font-size: 32px;
-    color: #152235;
+footer div ul li a{
+    text-decoration: none;
 }
 
-footer div ul li:nth-child(2) a i{
-    margin: 0 32px;
+footer span[class^="icon"] {
+    font-size: 2em;
+    color: white;
 }
 
 .copyright_container {
-    background-color: #152235;
-    padding: 8px;
+    padding: 0.5em;
 }
 
 .copyright_container p{
     text-align: center;
     color: #acacac;
-    margin-top: 12px;
-    
+    margin-top: 0.5em;
+    font-size: 1em;
 }
-
-/*  303d4f
-    253040
-    012032
-*/
