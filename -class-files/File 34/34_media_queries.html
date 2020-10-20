@@ -14,12 +14,35 @@
             body {
                 background-color: rgba(137, 43, 226, 0.493);
             }
+
+            .container div {
+                width: 48%;
+                float: left;
+                margin: 1%;
+            }
         }
 
         .divone {
             background-color: blue;
             width: 320px;
             height: 64px;
+        }
+
+        .container {
+            background-color: rgba(128, 255, 0, 0.541);
+            padding: 15px;
+        }
+
+        .container div {
+            background-color: rgba(210, 105, 30, 0.473);
+            margin-bottom: 15px;
+            height: 150px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
         }
     </style>
 </head>
@@ -28,7 +51,7 @@
 
     <p>Lorem ipsum sociosqu mollis non commodo</p>
 
-    <div class="container">
+    <div class="container clearfix">
         <div>
             <p>1° parágrafo</p>
         </div>
@@ -38,6 +61,6 @@
         </div>
     </div>
 
-    <div class="divone"></div>
+    <!-- <div class="divone"></div> -->
 </body>
 </html>
