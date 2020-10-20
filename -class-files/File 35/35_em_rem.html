@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Unidades de medidas</title>
+
+    <style>
+        html {
+            font-size: 32px;
+        }
+
+        body {
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+
+        div {
+            border: 1px solid black;
+            padding: 1em;
+            width: 20em;
+            margin: auto;
+            font-size: 16px;
+        }
+
+        p{
+            margin: 0;
+            line-height: 1.5;
+            font-size: 1.25em; /*20px*/
+        }
+
+        a {
+            font-size: 1.2em; /*A unida em sempre vai respeitar o font-size do elemento pai, que nesse contexto a tag p que tem o font-size igual a 20px*/
+        }
+
+        span {
+            font-size: 1rem; /*Sempre vai ser relativo ao font-size que foi definido na tag html nesse contexto 32px*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Unidades de medidas</h1>
+
+    <div>
+        <p>
+            Lorem ipsum et odio tempus erat rhoncus tristique sociosqu, lorem cubilia neque diam velit vitae per tincidunt, quam odio in netus duis primis augue. auctor curabitur et <a href="#"> sodales lobortis porttitor</a> posuere ligula diam eleifend curae molestie, maecenas consequat cursus nunc curabitur id mattis iaculis ultricies. fusce pharetra <span>felis cras amet aliquet ultrices</span> inceptos, venenatis vestibulum nulla rutrum risus amet, risus euismod dui proin massa ultricies. turpis mi pulvinar semper dictum nulla ad, integer inceptos vivamus per lectus sagittis et, sodales fermentum et rhoncus hac. venenatis taciti etiam pharetra neque suspendisse, nostra sem leo mollis tellus nostra, malesuada at nisi molestie.
+        </p>
+    </div>
+</body>
+</html>
