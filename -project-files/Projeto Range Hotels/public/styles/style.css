@@ -104,8 +104,6 @@ header {
     background-color: #37a0a0;
 }
 
-
-
 /* === SECOND SECTION === */
 
 .spiv {
@@ -144,8 +142,6 @@ header {
     margin: auto;
     line-height: 1.5;
 }
-
-
 
 /* === THIRD SECTION === */
 
@@ -278,9 +274,6 @@ footer span[class^="icon"] {
         color: white;
     }
 
-
-
-
     /* === MAIN === */
 
     /* === FIRST SECTION == */
@@ -300,5 +293,38 @@ footer span[class^="icon"] {
     .first_container div h2 {
         color: white;
         font-weight: normal;
+    }
+
+    .button-default {
+        font-size: 1.3em;
+    }
+
+    /* === SECOND SECTION === */
+
+    .second_container article{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .second_container span[class^="icon"] {
+        font-size: 3.5em;
+    }
+
+    .info_title {
+        font-size: 1.5em;
+    }
+
+    .info {
+        font-size: 1.2em;
+    }
+
+    /* === THIRD SECTION === */
+
+    .third_info_title {
+        font-size: 1.3em;
+    }
+
+    .third_info {
+        font-size: 1.2em;
     }
 }
