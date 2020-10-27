@@ -4,6 +4,7 @@
     --main-color: #612674;
     --second-color: #7c3792;
     --third-color: #58c4c4;
+    --fourth-color: #521a66;
 }
 
 * {
@@ -17,6 +18,12 @@ body {
     /* background-color: #efefef; */
 }
 
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 /* === HEADER === */
 
 header {
@@ -25,7 +32,7 @@ header {
 
 .nav_container {
     text-align: center;
-    margin-top: 16px;
+    margin-top: 1em;
 }
 
 .nav_container ul {
@@ -64,13 +71,14 @@ header {
 
 /* === MAIN === */
 
-
-
 /* === FIRST SECTION == */
 
 .first_container {
     margin-top: 2em;
     text-align: center;
+}
+
+.first_container div h1 {
     color: var(--main-color);
 }
 
@@ -198,7 +206,7 @@ footer span[class^="icon"] {
 }
 
 .copyright_container {
-    padding: 0.5em;
+    padding: 1em;
 }
 
 .copyright_container p{
@@ -206,4 +214,91 @@ footer span[class^="icon"] {
     color: #acacac;
     margin-top: 0.5em;
     font-size: 1em;
+}
+
+/* === RESPONSIVIDADE === */
+
+@media screen and (min-width: 48.75em) {
+
+    /* === HEADER === */
+
+    header {
+        width: 90%;
+        margin: 1em auto;
+        text-align: left;
+        /* background-color: cornflowerblue; */
+    }
+
+    .i_container {
+        float: left;
+        margin: 0.75em 0;
+        /* background-color: darkcyan; */
+    }
+    .i_container img{
+        display: block;
+        /* width: 300px; */
+    }
+
+    .nav_container {
+        margin-top: 0;
+        float: right;
+    }
+    
+    .nav_container ul {
+        width: 100%;
+        margin: 0.6em auto;
+        /* background-color: cyan; */
+    }
+    
+    .nav_container ul li {
+        text-align: center;
+        background-color: unset;
+        display: inline-block;
+    }
+    
+    .nav_container ul li a {
+        color: var(--main-color);
+        font-size: 1.3em;
+        letter-spacing: 0.2em;
+        width: 8em;
+        border-radius: 0.5em;
+    }
+    
+    .nav_container ul li:first-child a {
+        margin-top: 0;
+    }
+    
+    .nav_container ul li:last-child a {
+        margin-bottom: 0;
+    }
+    
+    .nav_container ul li a:hover {
+        background-color: var(--second-color);
+        box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.288);
+        color: white;
+    }
+
+
+
+
+    /* === MAIN === */
+
+    /* === FIRST SECTION == */
+
+    .first_container {
+        background-color: var(--fourth-color);
+        margin-top: 0;
+        padding: 1em;
+    }
+
+    .first_container div h1 {
+        color: white;
+        margin-top: 1em;
+        letter-spacing: 1.5px;
+    }
+
+    .first_container div h2 {
+        color: white;
+        font-weight: normal;
+    }
 }
