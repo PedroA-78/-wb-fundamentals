@@ -352,3 +352,42 @@ footer span[class^="icon"] {
         box-sizing: border-box;
     }
 }
+
+@media screen and (min-width: 64em) {
+    /* === MAIN === */
+
+    /* === FIRST SECTION == */
+
+    .first_container {
+        background-image: url(/public/assets/bg_topo_1600x1374.jpg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        height: 35em;
+        padding: 19em 20em;
+        box-sizing: border-box;
+    }
+
+    /* === SECOND SECTION === */
+
+    .spiv {
+        width: 95%;
+    }
+
+    .second_container article{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    /* === THIRD SECTION === */
+
+    .third_container article{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+
+    .third_info_container {
+        margin: 1em 0;
+    }
+}
