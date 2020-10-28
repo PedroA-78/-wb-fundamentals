@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cores</title>
+
+    <style>
+        .colors_content {
+            padding: 15px;
+            background-image: url(public/assets/tile.png);
+            counter-reset: contador;
+        }
+
+        .colors {
+            width: 50%;
+            height: 150px;
+            border: 3px solid rgba(0, 0, 0, 0.5);
+            margin: 20px auto;
+            padding: 15px;
+            font-size: 1.3em;
+            counter-increment: contador;
+        }
+
+        .colors::before {
+            content: '('counter(contador)')';
+        }
+
+        .colors:nth-child(2) {
+            background-color: blueviolet;
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(3) {
+            background-color: rgb(39%, 70%, 2%);
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(4) {
+            background-color: rgba(39%, 70%, 2%, 0.5);
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(5) {
+            background-color: hsl(36deg, 42%, 56%);
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(6) {
+            background-color: hsla(36deg, 42%, 56%, 0.5);
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(7) {
+            background-image: linear-gradient(90deg, red, transparent), linear-gradient(360deg, blue, transparent);
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(8) {
+            background-image: radial-gradient(red, blue);
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(9) {
+            background-image: radial-gradient(circle, red, blue);
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(10) {
+            background-image: radial-gradient(circle, green 33%, blue, gold 50%);
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(11) {
+            background-image: radial-gradient(closest-side at 20% 50%, yellowgreen 33%, blue, blueviolet 50%);
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(12) {
+            background-image: radial-gradient(farthest-side at 20% 90%, blue 33%, yellow, red 50%);
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(13) {
+            background-image: radial-gradient(closest-corner at 20% 50%, yellowgreen 33%, blue, blueviolet 50%);
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(14) {
+            background-image: radial-gradient(farthest-corner at 20% 90%, blue 33%, yellow, red 50%);
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(15) {
+            background-image: repeating-linear-gradient( red 0%, yellow 10%, blue 20%);
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(16) {
+            background-image: repeating-radial-gradient(red 3%, transparent, blue 33%);
+            background-clip: padding-box;
+        }
+
+        .colors:nth-child(17) {
+            background-image: radial-gradient(closest-corner at 50% 15%, gray, transparent), 
+            url(public/assets/1920x1080.jpg);
+            background-size: cover;
+            background-position: center -20px, center bottom;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Backgorund, cores e grandientes</h1>
+    <p>Names, hexadecimais, RGB, RGBa, HSL e HSLa</p>
+
+    <div class="colors_content">
+        <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+         <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+         <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+        <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+         <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+        <div class="colors">
+           <p>
+            Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+           </p> 
+        </div>
+
+        <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+         <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+         <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+         <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+         <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+         <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+         <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+         <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+         <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+         <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+
+         <div class="colors">
+            <p>
+            </p> 
+         </div>
+
+         <div class="colors">
+            <p>
+             Vulputate varius vitae pellentesque fringilla sodales ut velit semper dictum, odio aliquam dui nunc dapibus sit aliquet. erat class sem hendrerit cras venenatis senectus et porttitor curae at aliquam aptent, justo amet justo per habitasse purus vitae quisque sollicitudin tempus aenean.
+            </p> 
+         </div>
+    </div>
+</body>
+</html>
