@@ -219,7 +219,7 @@ footer span[class^="icon"] {
     /* === HEADER === */
 
     header {
-        margin: 1.5em 0;
+        margin: 1em 0;
         text-align: left;
         /* background-color: cornflowerblue; */
     }
@@ -353,19 +353,28 @@ footer span[class^="icon"] {
     }
 }
 
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 74em) {
     /* === MAIN === */
 
     /* === FIRST SECTION == */
 
     .first_container {
+        margin-top: unset;
         background-image: url(/public/assets/bg_topo_1600x1374.jpg);
         background-repeat: no-repeat;
-        background-position: center top;
+        background-position: top center;
         background-size: cover;
         height: 35em;
-        padding: 19em 20em;
-        box-sizing: border-box;
+        padding-top: 19em;
+    }
+
+    .first_container div h1 {
+        color: white;
+        font-size: 2em;
+    }
+    
+    .first_container div h2 {
+        font-size: 1.3em;
     }
 
     /* === SECOND SECTION === */
