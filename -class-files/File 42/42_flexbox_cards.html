@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox</title>
+
+    <style>
+        .cards {
+            display: flex;
+        }
+
+        .card {
+            border: 3px solid rgba(0, 0, 0, 0.5);
+            width: 30%;
+            padding: 16px;
+            margin: 1%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card p {
+            flex-grow: 1;
+        }
+
+        .card button {
+            align-self: flex-start;
+            width: 6em;
+            height: 3em;
+            border-radius: 0.7em;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Prática</h1>
+
+    <div class="cards">
+        <div class="card">
+            <h2>Lorem ipsum</h2>
+            <p>Rutrum lectus aliquam orci vel morbi lobortis neque urna ullamcorper aenean risus urna orci senectus, et consectetur cursus curae at libero dictumst venenatis platea pulvinar egestas ut sagittis. ante pretium ac suscipit feugiat.</p>
+            <button>Go To</button>
+        </div>
+
+        <div class="card">
+            <h2>Lorem ipsum</h2>
+            <p>Turpis molestie pellentesque augue ullamcorper lacus amet nisi molestie volutpat habitant urna interdum, enim consectetur mauris curabitur vulputate hendrerit.</p>
+            <button>Go To</button>
+        </div>
+
+        <div class="card">
+            <h2>Lorem ipsum</h2>
+            <p>Metus adipiscing consectetur tellus elementum per accumsan iaculis potenti interdum, hac eu ultrices hac dictum felis dictum quis, curabitur orci magna pulvinar scelerisque tellus sollicitudin pharetra blandit quam fermentum proin sed tempor pulvinar sodales, euismod at praesent ultrices aenean porta sem turpis, porta fringilla litora hac nibh arcu.</p>
+            <button>Go To</button>
+        </div>
+    </div>
+</body>
+</html>
