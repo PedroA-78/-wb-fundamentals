@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto-Fill/ Auto-Fit</title>
+
+    <style>
+        .grid_container {
+            width: 80%;
+            background-color: #ccc;
+            margin: 30px auto;
+
+            display: grid;
+            gap: 8px;
+            /* grid-template-columns: repeat(Auto-Fill, 100px); - (Auto-Fill) Vai deixar colunas em branco para serem preenchidas posteriormente */
+            grid-template-columns: repeat(Auto-Fit, minmax(100px, 1fr)); /* (Auto-Fit) Divide o espaço reserva entre os elementos ja existentes */
+        }
+
+        .grid_item {
+            background-color: yellowgreen;
+            padding: 16px;
+            font-family: sans-serif;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Auto-Fill/ Auto-Fit</h1>
+
+    <div class="grid_container">
+        <div class="grid_item">1</div>
+        <div class="grid_item">2</div>
+        <div class="grid_item">3</div>
+        <!-- <div class="grid_item">4</div>
+        <div class="grid_item">5</div>
+        <div class="grid_item">6</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">8</div>
+        <div class="grid_item">9</div>
+        <div class="grid_item">10</div>
+        <div class="grid_item">11</div>
+        <div class="grid_item">12</div> -->
+    </div>
+</body>
+</html>
