@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slideshow</title>
+
+    <style>
+        .slide_container {
+            width: 500px;
+            height: 500px;
+            border: 3px solid black;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slide_imgs {
+            display: flex;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation-name: slideshow;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+        .slide_imgs img {
+            height: 100%;
+        }
+
+        @keyframes slideshow {
+            0%, 22% {
+                transform: translateX(0);
+            }
+
+            25%, 47% {
+                transform: translateX(-100%);
+            }
+
+            50%, 72% {
+                transform: translateX(-200%);
+            }
+
+            75%, 97% {
+                transform: translateX(-300%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Slideshow</h1>
+
+    <div class="slide_container">
+        <div class="slide_imgs">
+            <img src="/File 48/img1.jpg">
+            <img src="/File 48/img2.jpg">
+            <img src="/File 48/img3.jpg">
+            <img src="/File 48/img4.jpg">
+        </div>
+    </div>
+</body>
+</html>
