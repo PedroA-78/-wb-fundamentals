@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operadores lógicos - JS</title>
+</head>
+<body>
+    <h1>Operadores lógicos - JS</h1>
+
+    <script>
+        let idade = parseInt(prompt("Qual é a sua idade?"))
+        let corCam = prompt("Qual a cor da sua camisa? \n*Só é permitido pessoas com camisa cinza*")
+        
+        if ((idade >= 18) && ((corCam == "Cinza") || (corCam == "cinza"))) {
+            alert("Bem-vindo ao baile Cinza!")
+        } else {
+            alert("Infelizmente sua entrada foi negada.")
+        }
+    </script>
+</body>
+</html>
