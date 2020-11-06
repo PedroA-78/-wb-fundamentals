@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A cada 10 - JS</title>
+</head>
+<body>
+    <h1>A cada 10 - JS</h1>
+
+    <script>
+        let number = parseInt(prompt("Digite um número inteiro: "))
+        let mult = 1
+
+        document.write(" === For ===<br>")
+        for (mult = 1; mult <= 50; mult++) {
+            document.write("<br>" + number + " * " + mult + " = " + (number * mult))
+            if (mult % 10 == 0) {
+                document.write("<hr>")
+            }
+        }
+    </script>
+</body>
+</html>
