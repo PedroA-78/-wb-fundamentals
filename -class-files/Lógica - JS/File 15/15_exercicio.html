@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício - JS</title>
+
+    <style>
+        .calc_container {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        
+        button {
+            width: 3em;
+            height: 3em;
+            font-size: 3em;
+        }
+
+        .output {
+            width: 50%;
+            /* height: 8em; */
+            margin: 8px auto;
+            /* background-color: aquamarine; */
+            font-size: 8em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício - JS</h1>
+
+    <div class="calc_container">
+        <button onclick="Somar()">+</button>
+        <button onclick="Subtrair()">-</button>
+        <button onclick="Multiplicar()">*</button>
+        <button onclick="Dividir()">/</button>
+        <button onclick="Clear()">C</button>
+
+    <div class="output">2</div>
+    <div class="old_out"></div>
+    </div>
+
+    <script>
+        let output = document.querySelector(".output")
+        let old = document.querySelector(".old_out")
+
+        let Resul = parseFloat(prompt("Digite um número: "))
+        let Produto
+        let OldNumber = Resul
+
+        Resultado()
+
+        function Somar() {
+            Produto = parseFloat(prompt("Digite um número: "))
+            Resul = Resul + Produto
+            OldNumber += " + " + Produto 
+            Resultado()
+            Old()
+        }
+
+        function Subtrair() {
+            Produto = parseFloat(prompt("Digite um número: "))
+            Resul = Resul - Produto
+            OldNumber += " - " + Produto 
+            Resultado()
+            Old()
+        }
+
+        function Multiplicar() {
+            Produto = parseFloat(prompt("Digite um número: "))
+            Resul = Resul * Produto
+            OldNumber += " * " + Produto 
+            Resultado()
+            Old()
+        }
+
+        function Dividir() {
+            Produto = parseFloat(prompt("Digite um número: "))
+            Resul = Resul / Produto
+            OldNumber += " / " + Produto 
+            Resultado()
+            Old()
+        }
+
+        function Resultado() {
+            output.innerHTML = Resul
+        }
+
+        function Old() {
+            old.innerHTML = OldNumber
+        }
+
+        function Clear() {
+            Resul = ""
+            OldNumber = ""
+            Resultado()
+            Old()
+        }
+    </script>
+</body>
+</html>
