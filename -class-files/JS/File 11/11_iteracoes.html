@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iterações - JS</title>
+</head>
+<body>
+    <h1>Iterações - JS</h1>
+
+    <script>
+        let number = parseInt(prompt("Digite um número inteiro: "))
+        let mult = 1
+
+        document.write(" === While ===<br>")
+        while (mult <= 50 ) {
+            document.write("<br>" + number + " * " + mult + " = " + (number * mult))
+            mult++
+        }
+
+        number++
+        mult = 1
+
+        document.write("<br><br> === Do-While ===<br>")
+        do {
+            document.write("<br>" + number + " * " + mult + " = " + (number * mult))
+            mult++
+        } while(mult <= 50)
+
+        number++
+
+        document.write("<br><br> === For ===<br>")
+        for (mult = 1; mult <= 50; mult++) {
+            document.write("<br>" + number + " * " + mult + " = " + (number * mult))
+        }
+    </script>
+</body>
+</html>
