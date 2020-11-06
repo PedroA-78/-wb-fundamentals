@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício - JS</title>
+</head>
+<body>
+    <h1>Exercício - JS</h1>
+
+    <script>
+        let n1 = parseInt(prompt("Jogador 1, digite um número inteiro: "))
+        let n2 = parseInt(prompt("Jogador 2, digite um número: "))
+
+        let nSorteado = parseInt(Math.random() * 2)
+
+        if (n1 == n2) {
+            alert("Os números são iguais então é um empate")
+        } else {
+            if ((nSorteado == 0 && n1 < n2) || (nSorteado == 1 && n1 > n2)) {
+                alert("O jogador número 1 ganhou!")
+            } else {
+                alert("O jogador número 2 ganhou!")
+            }
+        }
+    </script>
+</body>
+</html>
