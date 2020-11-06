@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inserção de conteúdo - JS</title>
+</head>
+<body>
+    <h1>Inserção de conteúdo - JS</h1>
+
+    <button onclick="Show()">Criar</button>
+    <button onclick="Clear()">Limpar</button>
+
+    <div class="output"></div>
+    
+
+    <script>
+        let output = document.querySelector(".output")
+        let table = ""
+
+        function Show() {
+            let number = parseInt(prompt("Digite um número inteiro: "))
+
+            Clear()
+
+            for (let i = 1; i <= 10; i++) {
+                table += number + " * " + i + " = " + (number * i ) + "<br>"
+            }
+
+            output.innerHTML = table
+
+        }
+
+        function Clear() {
+            table = ""
+            output.innerHTML = table
+        }
+    </script>
+</body>
+</html>
