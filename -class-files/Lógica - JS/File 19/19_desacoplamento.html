@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desacoplamento - JS</title>
+
+    <style>
+        .calc_container {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        
+        button {
+            width: 3em;
+            height: 3em;
+            font-size: 3em;
+        }
+
+        .output {
+            width: 50%;
+            /* height: 8em; */
+            margin: 8px auto;
+            /* background-color: aquamarine; */
+            font-size: 8em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desacoplamento - JS</h1>
+
+    <div class="calc_container">
+        <button onclick="InCalc('+')">+</button>
+        <button onclick="InCalc('-')">-</button>
+        <button onclick="InCalc('*')">*</button>
+        <button onclick="InCalc('/')">/</button>
+        <button onclick="Clear()">C</button>
+
+    <div class="output">2</div>
+    <div class="old_out"></div>
+    </div>
+
+    <script>
+        let output = document.querySelector(".output")
+        let old = document.querySelector(".old_out")
+
+        let n1 = parseFloat(prompt("Digite um número: "))
+        let OldNum = n1
+
+        Show(n1)
+
+        function InCalc(sinal) {
+            let n1 = parseFloat(document.querySelector(".output").textContent)
+            let n2 = Produto = parseFloat(prompt("Digite um número: "))
+
+            let calc = Calc(sinal, n1, n2)
+            Show(calc)
+            OldNum += sinal + n2
+            Old()
+        }
+
+        function Calc(sinal, n1, n2) {
+            let numCalc = null
+
+            switch (sinal) {
+                case "+":
+                    numCalc = n1 + n2
+                    break;
+                case "-":
+                    numCalc = n1 - n2
+                    break;
+                case "*":
+                    numCalc = n1 * n2
+                    break;
+                case "/":
+                    numCalc = n1 / n2
+                    break;
+            }
+            return numCalc
+        }
+
+        function Show(number) {
+            output.innerHTML = number
+        }
+
+        function Old() {
+            old.innerHTML = OldNum
+        }
+
+        function Clear() {
+            n1 = parseFloat(prompt("Digite um novo número: "))
+            OldNum = n1
+            Show(n1)
+            Old()
+        }
+    </script>
+</body>
+</html>
