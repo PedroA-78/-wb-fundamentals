@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parâmetros - JS</title>
+</head>
+<body>
+    <h1>Parâmetros - JS</h1>
+
+    <button onclick="ShowAreaA()">Alert</button>
+    <button onclick="ShowAreaO()">Output</button>
+
+    <div class="output"></div>
+
+    <script>
+        let output = document.querySelector(".output")
+        
+        function ShowAreaA() {
+            let l = parseFloat(prompt("Insira a largura em metros: "))
+            let a = parseFloat(prompt("Insira a altura em metros: "))
+            try {
+                let msg = CalcArea(l, a)
+            } catch (error) {
+                alert(error)
+                return
+            }
+            alert(msg)
+        }
+
+        function ShowAreaO() {
+            let l = parseFloat(prompt("Insira a largura em metros: "))
+            let a = parseFloat(prompt("Insira a altura em metros: "))
+            try {
+                let msg = CalcArea(l, a)
+            } catch (error) {
+                alert(error)
+                return
+            }
+            output.innerHTML = (msg)
+        }
+        
+        function CalcArea(larg, alt) {
+            if (larg == undefined || alt == undefined) {
+                throw new Error("Para realizar o cálculo é necessário que digite os dois valores.")
+            } 
+            
+            if (isNaN(larg) || isNaN(alt)) {
+                throw new Error("Valor inserido é inválido!")
+            }
+            msg = ("A área total baseado nos valores inseridos é de: " + (larg * alt) + "m.")
+
+            return msg
+        }
+    </script>
+</body>
+</html>
