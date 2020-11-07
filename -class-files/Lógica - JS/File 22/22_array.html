@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array - JS</title>
+</head>
+<body>
+    <h1>Array - JS</h1>
+
+    <button onclick="ShowArray()">Output</button>
+
+    <div class="output"></div>
+
+    <script>
+        let output = document.querySelector(".output")
+
+        let itens = new Array("Caneta", "Lápis", "Tesoura", "Borracha", "Cola")
+
+        itens.push("Compasso", "Régua")
+
+        function ShowArray() {
+            let msg = "" 
+            for (let i = 0; i <= itens.length - 1; i++) {
+                msg += (i + 1) + "° " + itens[i] + "<br>"
+            }
+            output.innerHTML = msg
+        }
+    </script>
+</body>
+</html>
