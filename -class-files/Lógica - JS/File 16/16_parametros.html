@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parâmetros - JS</title>
+</head>
+<body>
+    <h1>Parâmetros - JS</h1>
+
+    <script>
+        let l = parseFloat(prompt("Insira a largura em metros: "))
+        let a = parseFloat(prompt("Insira a altura em metros: "))
+
+        ShowArea(l, a)
+
+        function ShowArea(larg, alt) {
+            alert("A área total baseado nos valores inseridos é de: " + (larg * alt) + "m.")
+        }
+    </script>
+</body>
+</html>
