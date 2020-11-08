@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício - JS</title>
+</head>
+<body>
+    <h1>Exercício - JS</h1>
+
+    <button onclick="addPeople()">Adicionar pessoas</button>
+    <div class="output"></div>
+
+    <script>
+        let people = [
+            {nome: "Juvana", email:"juvana@mail.com"},
+            {nome: "Padora", email:"padora@mail.com"},
+            {nome: "Predo", email:"predo@mail.com"}
+        ]
+
+        let output = document.querySelector(".output")
+        let msg = ""
+        
+        out()
+
+        function out() {
+            msg = ""
+
+            for (let i = 0; i <= people.length - 1; i++) {
+                msg += "Nome: " + people[i].nome + "<br>" +"Mail: " + people[i].email + "<br><br>"
+            }
+
+            output.innerHTML = msg
+        }
+
+        function addPeople() {
+            let name = prompt("Digite o nome: ")
+            let mail = prompt("Digite o email: ")
+
+            people.push({nome: name, email: mail})
+            out()
+        }
+    </script>
+</body>
+</html>
