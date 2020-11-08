@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos - JS</title>
+</head>
+<body>
+    <h1>Objetos - JS</h1>
+
+    <div class="output"></div>
+
+    <script>
+        let caneta = new Object()
+        caneta.nome = "Caneta azul"
+        caneta.preco = 1.5
+        caneta.qtde = 999
+        caneta.comprar = function(qtd) {
+            if (!qtd) {
+                qtd = 1
+            }
+            console.log("O produto caneta foi comprada!")
+            this.qtde = this.qtde - qtd
+            console.log("Quantidade total de: " + this.qtde)
+        }
+
+        let caderno =  new Object()
+        caderno.nome = "Caderno 1 mat"
+        caderno.preco = 13.99
+        caderno.qtde = 999
+
+        let arr = new Array()
+        arr.push(caneta, caderno)
+
+        let msg = ""
+
+        for (let i = 0; i <= arr.length - 1; i++) {
+            msg += "Produto: " + arr[i].nome + "<br>"
+            msg += "Preço: " + arr[i].preco + "<br>"
+            msg += "Quantidade: " + arr[i].qtde + "<br><br>"
+        }
+        
+        // msg += "1° " + caneta.nome + "<br>" + "2° " + "R$" + caneta.preco + "<br>" + "3° " + caneta.qtde + "<br><br>" + "1° " + caderno.nome + "<br>" + "2° " + "R$" + caderno.preco + "<br>" + "3° " + caderno.qtde
+
+        let output = document.querySelector(".output")
+
+        output.innerHTML = msg
+    </script>
+</body>
+</html>
