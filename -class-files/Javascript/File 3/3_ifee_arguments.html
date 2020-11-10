@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFEE & Arguments</title>
+</head>
+<body>
+    <h1>IFEE & Arguments</h1>
+
+    <button onclick="Show()">Minha função</button>
+    <div class="output"></div>
+
+    <script>
+        //IFEE
+        (function(){
+            'use strict' // Não permite que variáveis sejam 
+            //declaradas sem (var ou let) antes, não permitindo 
+            //assim que elas se torne de escopo globais (1 e 2)
+            //isValid = false (1)
+            //console.log(isValid) (2)
+            console.log("Eu sou uma função auto-executável")
+        })();
+
+        let output = document.querySelector(".output")
+            
+            function Sum(arr) {
+                let result = 0
+                for (let i = 0; i <= arguments.length - 1; i++) {
+                    result = result + arguments[i]
+                }
+
+                return result
+            }
+
+            function Show() {
+                output.innerHTML = "O resultado é: " + Sum(59, 64, 27, 69, 71, 290, 49)
+            }
+    </script>
+</body>
+</html>
