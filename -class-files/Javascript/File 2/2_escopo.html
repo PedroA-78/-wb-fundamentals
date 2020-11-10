@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Escopo</title>
+</head>
+<body>
+    <h1>Escopo</h1>
+
+    <button onclick="ShowNum()">Minha função</button>
+    <div class="output"></div>
+
+    <script>
+        let output = document.querySelector(".output")
+
+        // Essa variável é visível globalmente
+        let num = 7
+
+        function ShowNum() {
+            // Essa variável é visível apenas localmente
+            // ou seja, dentro desta função
+            let num = 9
+            alert("Eu sou uma variável de escopo local: " + num)
+        }
+
+        console.log("Eu sou uma variável de escopo global: " + num)
+
+
+    </script>
+</body>
+</html>
