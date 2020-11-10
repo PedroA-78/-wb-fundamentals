@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funções literais</title>
+</head>
+<body>
+    <h1>Funções literais</h1>
+
+    <button onclick="Show(5, 3)">Minha função</button>
+    <div class="output"></div>
+
+    <script>
+        let output = document.querySelector(".output")
+
+        // Forma literal da função
+        function myFunc(n1, n2) {
+            return n1 + n2
+        }
+
+        myFunc.prop = "Propriedade da função"
+        console.log(myFunc.prop)
+
+        function Show(n1, n2) {
+            output.innerHTML = "O resultado é: " + myFunc(n1, n2)
+        }
+        // Uma variável que está recendo como valor uma função
+        let anom = function(str) {
+            console.log(str)
+        }
+
+        // A variável anônima sendo tratada como 
+        // função e passando uma string.
+        anom("Olá eu sou uma função anônima, recebendo uma string por parâmetro ;)")
+
+        function FuncP(f) {
+            f()
+        }
+
+        // Uma função que está passando outra
+        // função como parâmetro
+        FuncP(function(){
+            console.log("Olá eu sou uma função que está sendo passada como parâmetro ;)")
+        })
+        
+    </script>
+</body>
+</html>
