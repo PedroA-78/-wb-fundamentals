@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício</title>
+</head>
+<body>
+    <h1>Exercício</h1>
+    
+    <button onclick="ShowIMC()">Calcular meu IMC</button>
+    <div class="output"></div>
+    <script>
+        let output = document.querySelector(".output")
+
+        function ShowIMC() {
+            let altura = prompt("Qual é o seu tamanho: ")
+            altura = ConverAlt(altura)
+            let peso = prompt("Qual é o seu peso: ")
+            peso = ConverPeso(peso)
+
+            output.innerHTML = "O seu IMC é de: " + CalcIMC(altura, peso) + ", e você se está " + ClassIMC(CalcIMC(altura, peso))
+        }
+
+        function CalcIMC(alt, peso) {
+            let IMC = peso / (alt**2)
+            return IMC.toFixed(2)
+        }
+
+        function ClassIMC(imc) {
+            if (imc <= 16.9) {
+                return "muito abaixo do peso."
+            } else if (imc >= 17 && imc <= 18.4) {
+                return "abaixo do peso."
+            } else if (imc >= 18.5 && imc <= 24.9) {
+                return "com o peso normal."
+            } else if (imc >= 25 && imc <= 29.9) {
+                return "acima do peso."
+            } else if (imc >= 30 && imc <= 34.9) {
+                return "com Obsidade Grau I."
+            } else if (imc >= 35 && imc <= 40) {
+                return "com Obsidade Grau II."
+            } else if (imc > 40) {
+                return "com Obsidade Grau III."
+            }
+        }
+
+        function ConverAlt(alt) {
+           if (alt.includes(",") || isNaN(alt)) {
+                alt = alt.replace(",", ".")
+                while(isNaN(alt) || alt == "") {
+                    alt = prompt("Digite apenas números: ")
+                }
+                if (!alt.includes(".") && !isNaN(alt)) {
+                    alt = parseFloat(alt)
+                    alt /= 100
+                }
+                alt = parseFloat(alt)
+            } else if (!alt.includes(".") && !isNaN(alt)) {
+                alt = parseFloat(alt)
+                alt /= 100
+            }
+
+            return alt
+        }
+
+        function ConverPeso(peso) {
+            if (peso.includes(",") || isNaN(peso)) {
+                peso = peso.replace(",", ".")
+                while(isNaN(peso) || peso == "") {
+                    peso = prompt("Digite apenas números: ")
+                }
+                peso = parseFloat(peso)
+            }
+
+            return peso
+        }
+    </script>
+</body>
+</html>
