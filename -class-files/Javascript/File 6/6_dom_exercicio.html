@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - Exercício VI</title>
+
+    <script src="../Framework/beluga.js"></script>
+</head>
+<body>
+    <h1>DOM - Exercício VI</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Nota 3</th>
+                <th>Nota 4</th>
+                <th>Média</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="aluno">
+                <td class="aluno_name">Gertrude</td>
+                <td class="aluno_n1">10</td>
+                <td class="aluno_n2">8.5</td>
+                <td class="aluno_n3">9</td>
+                <td class="aluno_n4">7.5</td>
+                <td class="aluno_med"></td>
+            </tr>
+            <tr class="aluno">
+                <td class="aluno_name">Rey</td>
+                <td class="aluno_n1">5</td>
+                <td class="aluno_n2">8.5</td>
+                <td class="aluno_n3">6.5</td>
+                <td class="aluno_n4">7.5</td>
+                <td class="aluno_med"></td>
+            </tr>
+            <tr class="aluno">
+                <td class="aluno_name">Jessica</td>
+                <td class="aluno_n1">8</td>
+                <td class="aluno_n2">8.5</td>
+                <td class="aluno_n3">7</td>
+                <td class="aluno_n4">7.5</td>
+                <td class="aluno_med"></td>
+            </tr>
+            <tr class="aluno">
+                <td class="aluno_name">Olívia</td>
+                <td class="aluno_n1">6.5</td>
+                <td class="aluno_n2">8.5</td>
+                <td class="aluno_n3">10</td>
+                <td class="aluno_n4">7.5</td>
+                <td class="aluno_med"></td>
+            </tr>
+            <tr class="aluno">
+                <td class="aluno_name">Emerson</td>
+                <td class="aluno_n1">10</td>
+                <td class="aluno_n2">9.5</td>
+                <td class="aluno_n3">10</td>
+                <td class="aluno_n4">8.5</td>
+                <td class="aluno_med"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        let trs = document.querySelectorAll(".aluno")
+
+        for (let i = 0; i <= trs.length - 1; i++) {
+            console.log(trs[i])
+            let tds = trs[i].querySelectorAll(".aluno td")
+            for (let y = 0; y <= tds.length - 1; y++) {
+                console.log(tds[y])
+                
+                let grades = GradesColumns(tds)
+                let media = CalcM.apply(this, grades)
+                trs[i].querySelector(".aluno_med").textContent = media.toFixed(1)
+            }
+        }
+
+        function GradesColumns(tds) {
+            let arr = new Array()
+            for (let i = 0; i <= tds.length - 1; i++) {
+                if (!isNaN(tds[i].textContent) && tds[i].textContent != "") {
+                    arr.push(parseFloat(tds[i].textContent))
+                }
+            }
+            return arr
+        }
+    </script>
+</body>
+</html>

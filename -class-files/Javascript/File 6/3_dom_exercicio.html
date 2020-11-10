@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - Exercício III</title>
+</head>
+<body>
+    <h1>DOM - Exercício III</h1>
+
+    <input id="iname" type="text">
+    <button onclick="MyFunc()">Minha função</button>
+    <div id="output"></div>
+
+
+    <script>
+        let output = document.querySelector("#output")    
+        let name = ""
+        function MyFunc() {
+            name = document.getElementById("iname").value
+            if (name != "" && name != null) {
+                output.innerHTML = "Olá <b>" + name + "</b>, seja muito bem-vindo(a)!"
+            }
+        }
+    </script>
+</body>
+</html>

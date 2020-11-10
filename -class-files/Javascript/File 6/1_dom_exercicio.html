@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - Exercício I</title>
+</head>
+<body>
+    <h1>DOM - Exercício I</h1>
+
+    <div id="output"></div>
+
+    <script>
+        let output = document.querySelector("#output")
+        let name = prompt("Como devemos chamar você: ")
+
+        if (name != "" && name != null) {
+            output.textContent = "Olá " + name + ", seja muito bem-vindo(a)!"
+        }
+        
+    </script>
+</body>
+</html>

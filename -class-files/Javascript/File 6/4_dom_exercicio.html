@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - Exercício IV</title>
+</head>
+<body>
+    <h1>DOM - Exercício IV</h1>
+
+    <input id="iname" type="text">
+    <button onclick="MyFunc()">Minha função</button>
+    <div id="output"></div>
+
+
+    <script>
+        let output = document.querySelector("#output")    
+        let name = "Pedro A."
+        let lastName = "Ramos"
+
+        function MyFunc() {
+            document.getElementById("iname").value = name + " " + lastName
+            document.getElementById("iname").disabled = true
+        }
+    </script>
+</body>
+</html>
