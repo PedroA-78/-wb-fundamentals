@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício</title>
+</head>
+<body>
+    <h1>Exercício</h1>
+
+    <button onclick="addNum()">Adicionar número</button>
+    <button onclick="CalcM(arrNums)">Calcular média</button>
+    <button onclick="TryShow()">Testar ferramenta</button>
+
+    <div class="output"></div>
+    <div class="outNums"></div>
+    <script>
+        let output = document.querySelector(".output")
+        let outNums = document.querySelector(".outNums")
+        let arrNums = new Array()
+
+        function addNum() {
+            let num = parseFloat(prompt("Digite um número: "))
+            while(isNaN(num)) {
+                num = parseFloat(prompt("Por favor, digite apenas números: "))
+            }
+            arrNums.push(num)
+
+            ShowNum(num)
+        }
+
+        function ShowNum(num) {
+            let nums = document.querySelector(".outNums").textContent
+            nums += num + " + "
+            outNums.innerHTML = nums
+        }
+
+        function CalcM(arr) {
+            let result = 0
+            for (let i = 0; i <= arr.length - 1; i++) {
+                result = (result + arr[i])
+            }
+            result = result / arr.length
+            ShowResult(result)
+        }
+
+        function ShowResult(result) {
+            Clear()
+            output.innerHTML = "A média entre os números inseridos é de: " + result.toFixed(2)
+        }
+
+        function Clear() {
+            outNums.innerHTML = ""
+        }
+
+        /* === EXERCÍCIO === */
+
+        function TryCalcM(arr) {
+            let result = 0
+            for (let i = 0; i <= arguments.length - 1; i++) {
+                result += arguments[i]
+            }
+            result /= arguments.length
+            return result
+        }
+
+        function TryShow() {
+            output.innerHTML = "A média é: " + TryCalcM(1, 1, 2, 3, 5)
+        }
+    </script>
+</body>
+</html>
