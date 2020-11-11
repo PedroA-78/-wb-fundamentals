@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects Constructors</title>
+</head>
+<body>
+    <h1>Objects Constructors</h1>
+
+    <script>
+        function Caneta(preco, cor) {
+            this.preco = preco || 1
+            color = cor || "Blue"
+            this.changeColor = function(cor) {
+                if (cor != "Blue" && cor != "Black" && cor != "Red") {
+                    return
+                }
+                color = cor
+            }
+            this.catchColor = function() {
+                return color
+            }
+        }
+
+        let caneta1 = new Caneta(1.5)
+        caneta1.changeColor("Black")
+    </script>
+</body>
+</html>
