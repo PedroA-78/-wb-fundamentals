@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício</title>
+
+    <style>
+        .estilo {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício</h1>
+    <p>Permitir o envio do formulário somente após o usuário<br> aceitas os termos e condições(checkbox).<br> Para este exemplo, vamos habilitar ou desabilitar o botão dependendo do checkbox.</p>
+
+    <hr>
+
+    <form action="" id="form">
+        <textarea name="" id="" style="resize: none; width: 200px; height: 150px;" wrap="hard">Termos e condições do contrato de serviço...</textarea>
+        
+        <label class="estilo" for="chkTerms"><input type="checkbox" name="checked" id="chkTerms" checked>Aceito os termos e condições.</label>
+        
+        <button type="submit" id="btn">Login</button>
+    </form>    
+
+    <script> 
+        let form = document.getElementById("form")
+        let checkbox = document.getElementById("chkTerms")
+        let btn = document.getElementById("btn")
+
+        form.addEventListener("submit", function(e){
+            alert("Agradecemos desde já pelos seus serviços.")
+        })
+
+        btn.disabled = !checkbox.checked
+
+        checkbox.addEventListener("change", function(){
+            if (!this.checked) {
+                btn.disabled = true
+            } else {
+                btn.disabled = false
+            }
+        })
+    </script>
+</body>
+</html>
