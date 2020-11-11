@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício</title>
+</head>
+<body>
+    <h1>Exercício</h1>
+
+    <button onclick="addPeople(arr)">Adicionar pessoa</button>
+    <button onclick="changePeople(arr)">Mudar o nome</button>
+    <button onclick="showAll(arr)">Exibir todos</button>
+    <button onclick="clearAll()">Limpar nomes</button>
+    <div class="output"></div>
+
+    <script>
+        let output = document.querySelector(".output")
+        let arr = new Array(
+            {name: "Pedro A.", lastName: "Ramos"},
+            {name: "Gyovana M.", lastName: "Ramos"},
+            {name: "Pandora", lastName: "Ramos"}
+        )
+
+        function People(name, lastName) {
+            this.name = name
+            this.lastName = lastName
+        }
+
+        function addPeople(peoples) {
+            let name = prompt("Digite o nome: ")
+            let lastName = prompt("Digite o sobrenome: ")
+            peoples.push(new People(name, lastName))
+        }
+
+        function changePeople(peoples) {
+            let ind = parseInt(prompt("Digite o número da pessoa que você deseja fazer a mudança: "))
+            peoples[ind - 1].name = prompt("Digite o novo nome: ")
+            peoples[ind - 1].lastName = prompt("Digite o novo sobrenome: ")
+            showAll()
+        }
+
+        function showAll(peoples) {
+            let personList = ""
+            for (let i = 0; i <= peoples.length - 1; i++) {
+                personList += "Pessoa " + (i + 1) + ": " + peoples[i].name + " " + peoples[i].lastName + "<br>" 
+            }
+
+            output.innerHTML = personList
+        }
+
+        function clearAll() {
+            arr = new Array()
+            output.innerHTML = ""
+        }
+    </script>
+</body>
+</html>
