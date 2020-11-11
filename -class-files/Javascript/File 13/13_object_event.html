@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objeto evento</title>
+</head>
+<body>
+    <h1>Objeto evento</h1>
+
+    <button id="btn">Botão</button>
+    <script>
+        let $btn = document.getElementById("btn")
+        $btn.addEventListener("click", function(e){
+            alert("Olha o console!")
+            console.log(e)
+        })
+    </script>
+</body>
+</html>
