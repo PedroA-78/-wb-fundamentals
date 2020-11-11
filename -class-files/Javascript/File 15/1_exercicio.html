@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício I</title>
+</head>
+<body>
+    <h1>Exercício I</h1>
+    <p>Validar um formulário de login(usuário e senha) ao<br> clicar no botão de envio. Se existir algum campo vazio<br> deve ser mostrado um alert e impedir o envio.</p>
+
+    <hr>
+
+    <form action="#">
+        <label for="txtUser">Usuário: </label>
+        <input type="text" id="txtUser">
+        
+        <label for="txtPass">Senha: </label>
+        <input type="text" id="txtPass">
+
+        <button id="btn_login">Login</button>
+    </form>
+
+    
+
+    <script>
+        let btn_login = document.getElementById("btn_login")
+        
+        btn_login.addEventListener("click", function(){
+            let user = document.getElementById("txtUser").value
+            let password = document.getElementById("txtPass").value
+            
+            if (user == "" || password == "") {
+                alert("Por favor, preencha todos os campos!")
+            } else {
+                document.getElementById("txtUser").value = ""
+                password = document.getElementById("txtPass").value = ""
+                alert("Seja bem-vindo(a) " + user + ".")
+            }
+        })
+    </script>
+</body>
+</html>

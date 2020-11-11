@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício II</title>
+</head>
+<body>
+    <h1>Exercício II</h1>
+    <p>Efetuar o mesmo exemplo anterior, mas agora<br> não mais validando no click do botão, mas sim<br> no submit do formulário</p>
+
+    <hr>
+
+    <form action="#" method="POST">
+        <label for="txtUser">Usuário: </label>
+        <input type="text" id="txtUser" name="user">
+        
+        <label for="txtPass">Senha: </label>
+        <input type="text" id="txtPass" name="password">
+
+        <button type="submit" id="btn_login">Login</button>
+    </form>
+
+    
+
+    <script>
+        let form = document.querySelector("form")
+
+        form.addEventListener("submit", function(e){
+            let user = document.getElementById("txtUser").value
+            let password = document.getElementById("txtPass").value
+            
+            if (user == "" || password == "") {
+                alert("Por favor, preencha todos os campos!")
+                e.preventDefault()
+                //Previne o comportamento padrão, nesse caso, o formulário não será enviado, se os campos não tiverem preenchidos.
+            } else {
+                alert("Seja bem-vindo(a) " + user + ".")
+            }
+        })
+    </script>
+</body>
+</html>
