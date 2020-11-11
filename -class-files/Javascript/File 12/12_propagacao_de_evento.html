@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Propagação de eventos</title>
+</head>
+<body>
+    <h1>Propagação de eventos</h1>
+
+    <div class="divone" style="background-color: rgb(150, 252, 226);">
+        <p style="background-color: blueviolet; padding: 2em; display: inline-block;">Texto dentro do parágrafo<span style="background-color: cyan; padding: 1em;">Texto dentro do span</span></p>
+        
+    </div>
+
+    <script>
+        let $divone = document.querySelector(".divone")
+        let $divoneP = document.querySelector(".divone p")
+        let $divoneSpan = document.querySelector(".divone span")
+
+        $divone.addEventListener("click", function(){
+            alert("Eu sou a div")
+        })
+
+        $divoneP.addEventListener("click", function(){
+            alert("Eu sou o parágrafo")
+        })
+
+        $divoneSpan.addEventListener("click", function(){
+            alert("Eu sou o span")
+        })
+    </script>
+</body>
+</html>
