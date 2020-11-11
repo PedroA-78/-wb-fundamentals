@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Level 0</title>
+</head>
+<body>
+    <h1>DOM Level 0</h1>
+
+    <button onclick="inButton()">Botão 1</button>
+    <button id="btn1">Botão 2</button>
+
+    <script>
+        document.getElementById("btn1").onclick = offButton
+
+        function inButton() {
+            alert("evento onclick no html")
+        }
+
+        function offButton() {
+            alert("evento onclick no javascript")
+        }
+    </script>
+</body>
+</html>
