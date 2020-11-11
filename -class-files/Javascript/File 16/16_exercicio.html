@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício</title>
+</head>
+<body>
+    <h1>Exercício</h1>
+    <p>Em uma &lt;textarea&gt; com um número máximo de caracteres<br> permitidos, mostrar em uma &lt;span&gt; o<br> número de caracteres restanteso.</p>
+
+    <hr>
+
+    <p id="charCont" style="display: none;">Restam <span id="characters"></span> caracters.</p>
+    
+    <textarea id="txt_area" maxlength="25" cols="50" rows="10" style="resize: none;"></textarea>
+
+    <script>
+        let txt_area = document.getElementById("txt_area")
+        let maxlength = parseInt(txt_area.getAttribute("maxlength"))
+        
+        let charCont = document.getElementById("charCont")
+        charCont.style.display = "block"
+
+        let characters = document.getElementById("characters")
+        charsRemaining()
+
+        txt_area.addEventListener("input", function(){
+            charsRemaining()
+        })
+
+        function charsRemaining() {
+            characters.textContent = maxlength - txt_area.value.length
+        }
+    </script>
+</body>
+</html>
