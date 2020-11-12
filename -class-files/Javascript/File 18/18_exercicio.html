@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício</title>
+</head>
+<body>
+    <h1>Exercício</h1>
+    <p>Atrelar eventos de click em uma coleção de botões<br> que ao serem clicados, mostram o seu conteúdo.</p>
+
+    <hr>
+
+    <div class="divone">
+        <button class="btn">Botão 1</button>
+        <button class="btn">Botão 2</button>
+        <button class="btn">Botão 3</button>
+        <button class="btn">Botão 4</button>
+        <button class="btn">Botão 5</button>
+    </div>
+    <div class="output"></div>
+
+    <script>
+        let output = document.querySelector(".output")
+        let divone = document.querySelector(".divone")
+
+        divone.addEventListener("click", function(e){
+            output.innerHTML = "O conteúdo do botão é: " + e.target.textContent + "."
+        })
+    </script>
+</body>
+</html>
