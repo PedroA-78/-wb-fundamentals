@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício</title>
+
+    <style>
+        .done {
+           text-decoration: line-through;
+           color: #777; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício</h1>
+    <p>Fazer uma pequena lista de tarefas onde o usuário<br> poderá acrescentar um novo item &lt; li &gt; na lista &lt; ul &gt;<br> através de um input e um botão. Está lista deve estar<br> preenchida previamente com três itens<br> quaisquer. Acrescentar eventos de click em cada &lt; li &gt;<br> para marcar como feito.</p>
+
+    <hr>
+
+    <h2>Lista de tarefas</h2>
+    
+    <label for="txtTask">Nova tarefa: </label>
+    <input type="text" id="txtTask">
+    <button id="add">Adicionar tarefa</button>
+    <!-- <button id="clear">Excluir tarefa</button> -->
+
+    <ul>
+        <li>Estudar HTML</li>
+        <li>Estudar CSS</li>
+        <li>Estudar JavaScript</li>
+    </ul>
+
+    <script>
+        let add = document.getElementById("add")
+        let newTask = document.getElementById("txtTask")
+        let ul = document.querySelector("ul")
+        let lis = ul.querySelectorAll("li")
+
+        add.addEventListener("click", addTask)
+        add.addEventListener("keyup", key)
+        newTask.addEventListener("keyup", key)
+
+        function key(e){
+            if (e.key == "Enter" || e.keyCode == 13) {
+                addTask()
+            }
+        }
+        
+        function addTask(){
+            if (newTask.value == "") {
+                
+                alert("Para adicionar uma nova tarefa, preencha o campo 'Nova tarefa'")
+                newTask.focus()
+            } else {
+                let li = document.createElement("li")
+                let task = document.createTextNode(newTask.value)
+                li.appendChild(task)
+                ul.appendChild(li)
+                newTask.value = ""
+                newTask.focus()
+            }
+        }
+
+        function removeTask(li) {
+            if (confirm("Deseja excluir a tarefa " + "'" + li.textContent + "'" + "?")){
+                li.parentNode.removeChild(li)
+            }
+        }
+
+        ul.addEventListener("click", function(e){
+            if (e.target.nodeName == "LI") {
+                toggleDone(e.target)
+
+                removeTask(e.target)
+            }
+        })
+        
+        function toggleDone(li) {
+            li.classList.toggle("done")
+        }
+        
+    </script>
+</body>
+</html>
