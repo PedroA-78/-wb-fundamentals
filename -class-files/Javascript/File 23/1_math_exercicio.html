@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math - Exercício I</title>
+    <script src="../Framework/beluga.js"></script>
+</head>
+<body>
+    <h1>Math - Exercício I</h1>
+    <!-- Possuí métodos que nos auxiliam ao trabalhar com valores numéricos. Alguns deles são: min(), max(), round(), floor(), celi(), pow(), sqrt(), cbrt() e random() -->
+    <p>Criar uma nova função no framework, que vai <br> receber por parâmetro o número de valores possíveis<br> a serem retornado pela função.<br> Ex.: sortear(2) deve retornar 0 ou 1;<br> sortear(10), deve retornar números de 0 a 9.</p>
+
+    <hr>
+
+    <div class="output"></div>
+
+    <script>
+        /*Math.min(1, 2, 3, 4, 5)
+        1
+        Math.max(1, 2, 3, 4, 5)
+        5
+        Math.round(5.55)
+        6
+        Math.floor(5.55)
+        5
+        Math.ceil(5.1)
+        6
+        Math.pow(2, 3)
+        8
+        Math.sqrt(16)
+        4
+        Math.cbrt(125)
+        5
+        Math.random()
+        0.2536184128559513
+        Math.PI
+        3.141592653589793*/
+        let output = document.querySelector(".output")
+        let num = parseInt(prompt("Quantos números devo sortear?"))
+        let msg = ""
+        for (let i = 1; i <= 10; i++) {
+            msg += i + "° " +"O número sorteado foi: " + raffle(num) + ".<br>"
+        }
+        output.innerHTML = msg
+    </script>
+</body>
+</html>

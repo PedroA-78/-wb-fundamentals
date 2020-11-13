@@ -6,3 +6,8 @@ function CalcM(arr) {
     result /= arguments.length
     return result.toFixed(2)
 }
+
+function raffle(max) {
+    let n = max || 10
+    return Math.floor(Math.random() * n + 1)
+}
