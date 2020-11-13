@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array - Exercício II</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Array - Exercício II</h1>
+    <span>Selecionar todos os parágrafos da página e, <br>se tiver mais de 10 palavras, mostrar somente<br> as dez primeiras, seguido de reticências.</span>
+
+    <hr>
+
+    <h2>Texto normal</h2>
+    <div class="ps">
+        <p>Fames donec vestibulum eros metus ipsum fusce pharetra luctus quam erat etiam scelerisque curae condimentum varius turpis hac habitasse, primis feugiat curae iaculis mi morbi quis mattis nam felis sit odio sem massa non hac fusce. suspendisse justo sit vulputate laoreet malesuada vel consectetur, accumsan duis inceptos cubilia consectetur augue fermentum at, tristique viverra eleifend orci elementum quisque. consequat euismod vel quis himenaeos arcu mattis risus donec nulla, himenaeos molestie pharetra in dictum venenatis senectus primis, taciti habitant senectus euismod conubia mauris platea fames. lobortis potenti lectus enim nunc in habitasse, facilisis ultricies augue torquent proin, varius leo mollis vitae ultricies.</p>
+        
+        <p>Integer eros hac tempus nullam pulvinar neque praesent, orci dui ut morbi nec malesuada, tempor augue odio molestie amet class. lacinia in feugiat etiam augue integer libero etiam, quisque nec inceptos semper eu non lacus, viverra sem vulputate lacinia amet ut. habitasse ligula gravida tempor auctor mi, integer senectus sapien suscipit. sodales at venenatis ornare tincidunt primis ante fermentum donec habitasse, dictumst rhoncus etiam dictumst tincidunt faucibus libero nec. cubilia gravida vitae per justo urna enim pharetra id, mattis faucibus habitasse eget neque mi neque interdum, semper sem auctor aliquam enim in pharetra.</p>
+        
+        <p>Metus quisque vivamus nec ornare luctus ornare odio auctor nisi lobortis suscipit, porttitor orci etiam netus metus accumsan dolor ultricies aenean. neque molestie eleifend vivamus mi consectetur est nulla neque ut metus, blandit hendrerit primis dui per ultrices ante rutrum dapibus tortor, conubia turpis donec curabitur cubilia dapibus imperdiet fusce tortor. etiam porttitor phasellus tempor turpis neque ultricies sapien erat dui maecenas, metus nullam fames nulla morbi sodales fermentum cras sociosqu, curae semper primis ultrices sit viverra curabitur scelerisque lorem. cras quisque eros leo mollis eget class egestas morbi dolor felis vivamus, ut vel donec nisl odio egestas pulvinar aliquam ac imperdiet.</p>
+        
+        <p>Habitasse tortor ipsum platea laoreet lacinia mauris curabitur senectus sociosqu, augue semper elit aliquam eget hendrerit aliquet proin dui, aenean fermentum posuere curabitur sagittis ullamcorper dictum sem. elementum nulla viverra quis taciti sociosqu ante rutrum tristique luctus, ornare augue vivamus tincidunt nisi ipsum ornare quisque, justo hendrerit dui commodo laoreet aliquam tincidunt inceptos. ipsum taciti auctor pellentesque platea sed malesuada ultricies torquent quam accumsan, nostra ac ullamcorper fermentum potenti aenean rutrum vel. fusce laoreet netus nisl rhoncus himenaeos inceptos fringilla vivamus vestibulum, sollicitudin enim tempor laoreet lacus morbi sagittis quisque, ad habitant fermentum sagittis tempus blandit augue tristique.</p>
+        
+        <p>Eros velit blandit aenean at sem congue urna, lectus tellus eros convallis phasellus convallis tortor est, congue hendrerit pharetra quisque habitant varius vehicula, convallis mauris ullamcorper habitasse pharetra integer. risus semper vestibulum tellus adipiscing a aliquam fames lacus, in phasellus vivamus vestibulum in ultricies felis, fusce praesent nunc luctus nam libero mi. ad molestie quis curabitur potenti iaculis lacinia nullam aliquam mauris aenean duis, at et per et turpis eu lacinia quisque vehicula ligula. volutpat praesent justo vehicula nulla nec sed erat sociosqu magna sociosqu duis, fermentum dictumst ullamcorper accumsan eu ante himenaeos ut quam porttitor.</p>
+        
+        <p>Bibendum placerat faucibus enim risus lacinia, tincidunt sagittis justo nunc.</p>
+    </div>
+
+    <hr>
+
+    <h2>Texto formatado</h2>
+    <div class="output">
+
+    </div>
+    <script>
+        let output = document.querySelector(".output")
+        let ps = document.querySelectorAll("p")
+        let newPs = ""
+
+        for (let i = 0; i <= ps.length - 1; i++) {
+            let arr = ps[i].innerHTML.split(" ")
+            if (arr.length > 10) {
+                arr.splice(10, arr.length)
+                newPs += "<p>" + arr.join(" ") + "[...]</p>"
+            } else {
+                newPs += "<p>" + arr.join(" ") + "</p>"
+            }
+
+        } 
+
+        output.innerHTML = newPs
+    </script>
+</body>
+</html>

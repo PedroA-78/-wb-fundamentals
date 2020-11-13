@@ -28,7 +28,7 @@
             arr.push(n)
             } else if (n == 0) {
                 alert("Como o aluno tirou nota 0, o aluno está reprovado.")
-                debugger
+                arr.pop()
                 return
             }
         }
@@ -36,7 +36,7 @@
         let non_zero = arr.length == 0 ? false : true
         
         if (non_zero) {
-            alert(CalcM(arr))
+            alert(CalcM(...arr))
         }
     </script>
 </body>
