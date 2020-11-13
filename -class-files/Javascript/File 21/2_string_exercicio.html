@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String - Exercício II</title>
+</head>
+<body>
+    <h1>String - Exercício II</h1>
+    <span>Selecionar todos os parágrafos de uma página e,<br> se o texto tiver mais do que duzentos caracteres,<br> mostrar somente os duzentos primeiros, seguidos de reticencias.</span>
+
+    <hr>
+    
+    <h2>Texto Normal</h2>
+
+    <div class="text">
+        <p>Mattis <b>augue nec vulputate</b> vestibulum mattis imperdiet et viverra etiam donec, vehicula cras suscipit pulvinar nunc himenaeos taciti quisque elementum, consectetur platea quisque morbi scelerisque leo ultrices mauris leo. cursus lorem morbi phasellus laoreet sollicitudin venenatis augue, placerat nibh blandit diam phasellus lectus posuere, dui hendrerit convallis porttitor euismod hac. nisl vestibulum ipsum mauris blandit molestie eleifend, posuere senectus ad amet a praesent, curae cursus faucibus ornare egestas. ullamcorper arcu nulla integer rutrum consequat nibh fames vehicula, quisque lacinia lorem non donec molestie pellentesque fermentum, massa dapibus est curae quisque integer libero.</p>
+        
+        <p>Himenaeos nisi lorem nunc justo lacinia, adipiscing hac iaculis tortor, cubilia ornare a tristique. per erat consectetur molestie aptent sem ante torquent taciti sem mi, vivamus quis a varius tempor dictumst nulla molestie. enim lobortis feugiat tristique neque ultrices nullam est per vehicula imperdiet, ullamcorper malesuada euismod integer ultricies sit in condimentum. luctus in vitae ad mattis nostra amet interdum leo interdum, integer aliquet suspendisse proin tellus velit aliquam curabitur, mi placerat semper tellus vulputate mattis fusce ullamcorper. varius ligula tempor in pretium ullamcorper tristique inceptos urna a sem curabitur lacus neque, hendrerit tristique quisque interdum a ultricies velit malesuada luctus netus aliquet justo.</p>
+        
+        <p>Sem taciti bibendum libero volutpat cursus viverra interdum, porttitor mollis ligula pretium sit nunc, justo curae dictum purus posuere nisl. quisque vehicula facilisis nullam accumsan blandit integer arcu, duis ipsum at nec mauris justo leo fermentum, non pulvinar dapibus a est auctor. sem suscipit accumsan aenean aptent mollis nec aenean enim gravida, quam a et nec suscipit pellentesque consequat. volutpat nulla platea massa quisque mollis mi gravida a bibendum consectetur, condimentum interdum conubia ornare malesuada vehicula enim morbi commodo. fames morbi vivamus condimentum enim sagittis feugiat primis habitant aptent, habitasse consectetur scelerisque felis lacinia ligula fringilla diam ad, urna massa a diam class sollicitudin viverra non.</p>
+        
+        <p>Posuere in sollicitudin lacus pretium hac etiam viverra aliquam, cubilia felis mollis phasellus ligula aenean pellentesque non, eleifend tempor vehicula suspendisse suscipit ante metus. malesuada varius leo torquent cubilia facilisis etiam neque eget, volutpat nisi leo hac dictumst per augue varius, aenean mauris eleifend ultricies malesuada magna porttitor. euismod risus arcu etiam quisque metus imperdiet augue metus, varius habitant sollicitudin hendrerit lacus convallis taciti, lacinia viverra facilisis nisl accumsan netus sagittis risus, sollicitudin hendrerit a aenean porta tempus. diam in proin suscipit faucibus ultrices dolor hendrerit, mollis iaculis luctus justo tempus fringilla ligula, morbi fringilla facilisis turpis erat aptent.</p>
+        
+        <p>Nam inceptos phasellus nulla interdum suspendisse semper pulvinar curabitur semper risus, euismod sit dapibus ornare volutpat felis aptent taciti. rutrum volutpat sit himenaeos mattis pellentesque nam dictum laoreet tellus fermentum tortor, elit laoreet taciti tristique eget vestibulum vel inceptos curabitur mi, augue lorem curae arcu taciti erat ante sit himenaeos lobortis. nullam congue dolor semper cubilia pharetra eleifend, quis urna velit nullam euismod eget, sem augue lacinia sapien vivamus. ut faucibus vel litora congue in rutrum dolor et proin magna, adipiscing volutpat himenaeos volutpat vestibulum phasellus magna rhoncus a tincidunt, a sed suscipit molestie class praesent congue libero magna.</p>
+    </div>
+
+    <hr>
+
+    <h2>Texto formatado</h2>
+
+    <div class="output">
+
+    </div>
+
+    <script>
+        let output = document.querySelector(".output")
+        let ps = document.querySelectorAll("p")
+
+        for (let i = 0; i <= ps.length - 1; i++) {
+            formatP(ps[i].innerHTML)
+        }
+
+        function formatP(p) {
+            if (p.length >= 200) {
+                p = p.slice(0, 200)
+                p += "[...]"
+                showP(p)
+            } else {
+                showP(p.innerHTML)
+            }
+        }
+
+        function showP(p) {
+            output.innerHTML += "<p>" + p + "</p>"
+        }
+
+        
+    </script>
+</body>
+</html>

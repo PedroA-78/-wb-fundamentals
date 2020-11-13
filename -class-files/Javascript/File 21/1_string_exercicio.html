@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String - Exercício I</title>
+</head>
+<body>
+    <h1>String - Exercício I</h1>
+    <!-- Possuí métodos e propriedades: length,
+    replace(), indexOf(), lastIndexOf(), slice(),
+    substring(), split(), toLowerCase(), toUpperCase(),
+    valueOf() -->
+    <p>Criar uma função que receber um nome completo e<br> retorna este nome formatado, seguindo o exemplo:<br> "Pedro Aurelio Ramos" será formatada em: "Ramos, Pedro Aurelio."</p>
+
+    <hr>
+
+    <script>
+        let name = prompt("Digite seu nome completo: ")
+        let formattedName = formatName(name)
+        /*name.length
+        19
+        name.replace("Aurelio", "A.")
+        "Pedro A. Ramos"
+        name.indexOf("Aurelio")
+        6
+        name.lastIndexOf("s")
+        18
+        name.slice(6, 9)
+        "Aur"
+        name.substring(0, 5)
+        "Pedro"
+        name.split(" ")
+        (3) ["Pedro", "Aurelio", "Ramos"]
+        0: "Pedro"1: "Aurelio"2: "Ramos"
+        length: 3__proto__: Array(0)
+        name.toLowerCase()
+        "pedro aurelio ramos"
+        name.toUpperCase()
+        "PEDRO AURELIO RAMOS"
+        name.valueOf()
+        "Pedro Aurelio Ramos"*/
+        function  formatName(name) {
+            let lastSpace = name.lastIndexOf(" ") + 1
+            if (lastSpace == -1) {
+                return name
+            }
+            let lastName = name.slice(lastSpace, name.length)
+            return lastName + ", " + name.slice(0, lastSpace - 1) + "."
+        }
+        alert(formattedName)
+    </script>
+</body>
+</html>
