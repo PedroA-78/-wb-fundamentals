@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date - Exercício II</title>
+    <script src="../Framework/beluga.js"></script>
+</head>
+<body>
+    <h1>Date - Exercício II</h1>
+    <p>Criar uma função que retorne uma data<br> formatada no padrão brasileiro: DD/MM/AAAA.</p>
+
+    <hr>
+    
+    <script>
+        let currentDate = new Date(1969, 03, 01)
+        
+        alert(transform(currentDate))
+
+        function transform(date) {
+            let day = currentDate.getDate() < 10 ? "0" + currentDate.getDate() : currentDate.getDate()
+            let month = currentDate.getMonth() + 1
+            month = month < 10 ? "0" + month : month
+            let year = currentDate.getFullYear()
+
+            return day + "/" + month + "/" + year
+        }
+    </script>
+</body>
+</html>

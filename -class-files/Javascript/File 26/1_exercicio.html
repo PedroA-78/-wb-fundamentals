@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date - Exercício I</title>
+    <script src="../Framework/beluga.js"></script>
+</head>
+<body>
+    <h1>Date - Exercício I</h1>
+    <p>Fazer uma página que mostra quantos dias<br> faltam para o seu próximo aniversário<br> ou mostrar mensagem de parabéns.</p>
+
+    <hr>
+    
+    <script>
+        let currentDate = new Date()
+        currentDate.setHours(0);
+        currentDate.setMinutes(0);
+        currentDate.setSeconds(0);
+        currentDate.setMilliseconds(0);
+
+        let currentYear = currentDate.getFullYear()
+
+        let birthMonth = parseInt(prompt("Qual o mês do seu aniversário") - 1)
+        let birthDay = parseInt(prompt("Qual o dia do seu aniversário"))
+        let birthday = new Date(currentYear, birthMonth, birthDay, 0, 0, 0, 0)
+
+        let currentDateTS = currentDate.getTime()
+        let birthdayTS = birthday.getTime()
+
+        if (birthdayTS == currentDateTS) {
+            alert("Feliz aniversário!")
+        } else if (birthdayTS < currentDateTS) {
+            birthday.setFullYear(++currentYear)
+            birthdayTS = birthday.getTime()
+        }
+
+        const one_day = 24 * 60 * 60 * 1000
+        let difference = birthdayTS - currentDateTS
+        alert("Faltam " + difference / one_day + " dias para o seu aniversário." )
+    </script>
+</body>
+</html>
