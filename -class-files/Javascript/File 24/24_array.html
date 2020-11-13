@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+    <script src="../Framework/beluga.js"></script>
+    
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .output {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array</h1>
+    <!-- Possuí métodos e propriedades: length, every(),  some(), filter(), forEach(), indexOf(), lastIndexOf(), map(),concat(), join(), push(), pop(), shift(), unshift(), reduce(), reduceRight(), reverse(), slice(), splice() e toString() -->
+
+    <hr>
+
+    <div class="output"></div>
+
+    <script>
+        let output = document.querySelector(".output")
+        let arr = ["1", 2, 3, 4, 5, "abc", 7, "8"]
+        let method = ""
+
+        method += "Array inicial: " + arr + ".<br><br>"
+
+        method += "length: " + arr.length + ", mostra a quantidade elementos dentro do array" + ".<br><br>"
+
+        method += "every(): " + arr.every(function(element){
+            return typeof element == "number"
+        }) + ", mostra se todos os elementos dentro do array são do mesmo tipo" + ".<br><br>"
+
+        method += "some(): " + arr.some(function(element){
+            return typeof element == "number"
+        }) + ", mostra se tem ao menos um elemento dentro array igual ao tipo comparado, nesse caso, do tipo 'number'" + ".<br><br>"
+
+        method += "filter(): " + arr.filter(function(element, indice, arr){
+            return typeof element == "string"
+        }) + ", retorna outro array, com os dados que foram selecionados, nesse caso, do tipo 'string'" + ".<br><br>"
+
+        console.log("/* === forEach ===*/")
+        method += "forEach(): " + arr.forEach(function(element, indice, arr){
+            console.log("element " + indice + ": " + element)
+        }) + ", é um laço de repetição do próprio array que não necessita de um contador. 'Resultado no console'" + ".<br><br>"
+
+        method += "indexOf(): " + arr.indexOf("abc") + ", retorna o número do índice do elemento, pelo qual você procurou, nesse caso 'abc'" + ".<br><br>"
+
+        method += "lastIndexOf(): " + arr.lastIndexOf("8") + ", retorna o número do índice do último elemento, pelo qual você procurou, nesse caso '8'" + ".<br><br>"
+
+        method += "map(): " + arr.map(function(element, indice, arr){
+            return element + indice
+        }) + ", retorna os elementos que você selecionou, com a modificação que você especificou, nesse caso eu adicionei ao elemento o número do seu próprio índice" + ".<br><br>"
+
+        method += "concat(): " + arr.concat("def", 10, 11) + ", retorna o array com os novos elementos que você inseriu, pode ser definido separadamente ou, outra array" + ".<br><br>"
+
+        method += "join(): " + arr.join("; ") + ", transforma todo o array em string, aceitando como parâmetro um string como separador" + ".<br><br>"
+
+        method += "push(): " + arr.push("novo item") + ", adiciona um novo item ao array e retorna o novo numero de indices que o array contém. É um método destrutivo, pois ele realmente modifica o array" + ".<br><br>" 
+
+        method += "pop(): " + arr.pop() + ", remove o último elemento do array e retorna o seu valor. Também é um método destrutivo, pois ele realmente modifica o array" + ".<br><br>"
+
+        method += "shift(): " + arr.shift() + ", remove o primeiro elemento do array e retorna o seu valor. Também é um método destrutivo, pois ele realmente modifica o array" + ".<br><br>"
+
+        method += "unshift(): " + arr.unshift(true, false, "unshift") + ", adiciona os valores especificados ao array, porém adiciona no início do array. Também é um método destrutivo, pois ele realmente modifica o array" + ".<br><br>"
+
+        let nums = arr.filter(function(element){
+            return typeof element == "number"
+        })
+        method += "reduce(): " + nums.reduce(function(num, newNum){
+            return num + newNum
+        }) + ", executa uma função para cada elemento do array, resultando num único valor de retorno, nesse caso eu fiz retornar a soma dos elementos numbers" + ".<br><br>"
+
+        let strings = arr.filter(function(element){
+            return typeof element == "string"
+        })
+        method += "reduceRight(): " + strings.reduceRight(function(string, newString){
+            return string + newString
+        }) + ", executa uma função para cada elemento do array, resultando num único valor de retorno, nesse caso eu fiz retornar uma string uníca de de todas as strings do array começando pela direita" + ".<br><br>"
+
+        method += "reverse(): " + arr.reverse() + ", inverte a ordem dos itens de um array. Também é um método destrutivo, pois ele realmente modifica o array" + ".<br><br>"
+
+        method += "slice(): " + arr.slice(5, 7) + ", retorna um subarray de parte do array original criado a partir do índice que você indicou, pode indicar o índice final também" + ".<br><br>"
+
+        method += "splice(): " + arr.splice(6, 2, "abacaxi", "uva") + ", com esse método você pode inserir e remover elementos a partir de qualquer índice, o 1° parâmetro você indica a partir de qual índice vai ocerrer a transformação, o 2° parâmetro você indica quantos índices você quer apagar e o 3° parâmetro você indica os elementos que você quer incluir no array e ele retorna os elemetos que você apagou e é claro esse também é um método destrutivo" + ".<br><br>"
+
+        method += "toString(): " + arr.toString() + ", transforma o array em um string, porém você não pode definir um separador como o método join()" + ".<br><br>"
+
+        method += "Array atual: " + arr + ".<br><br>"
+
+        output.innerHTML = method
+    </script>
+</body>
+</html>
