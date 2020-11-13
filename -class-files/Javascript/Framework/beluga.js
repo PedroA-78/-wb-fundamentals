@@ -4,5 +4,5 @@ function CalcM(arr) {
         result += arguments[i]
     }
     result /= arguments.length
-    return result
+    return result.toFixed(2)
 }
