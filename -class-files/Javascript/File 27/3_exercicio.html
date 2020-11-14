@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer - Exercício III</title>
+    <script src="../Framework/beluga.js"></script>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        .interface_container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .buttons_container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .buttons_container button {
+            flex-grow: 1;
+            flex-basis: 100px;
+            margin: 16px 0;
+        }
+
+        .buttons_container button:nth-child(2) {
+            margin: 16px 24px;
+        }
+
+        .buttons {
+            height: 40px;
+        }
+
+        .timer_container {
+            width: 500px;
+            height: 250px;
+            border: 3px solid black;
+            padding: 8px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 116px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Timer - Exercício III</h1>
+    <p>Criar um cronômetro, construir uma interface<br> que contenha três botôes.<br> O primeiro botão deve iniciar o cronômetro,<br> o segundo deve pausar ou continuar a contagem<br> e o terceiro deve resetar o cronômetro.</p>
+
+    <hr>
+
+    <div class="interface_container">
+        <div class="buttons_container">
+            <button class="buttons" id="btn_init">Iniciar</button>
+            <button class="buttons" id="btn_pause">Pausar/ Continuar</button>
+            <button class="buttons" id="btn_reset">Resetar</button>
+        </div>
+        
+        <div class="timer_container"></div>
+    </div>
+    
+    <script>
+        let timer_container = document.querySelector(".timer_container")
+        let btn_init = document.getElementById("btn_init")
+        let btn_pause = document.getElementById("btn_pause")
+        let btn_reset = document.getElementById("btn_reset")
+
+        btn_init.addEventListener("click", function(){
+            init()
+        })
+
+        btn_pause.addEventListener("click", function(){
+            pause()
+        })
+
+        btn_reset.addEventListener("click", function(){
+            reset()
+        })
+
+        let running = false
+        function init(){
+            if (running) {
+                return
+            } else {
+                interval = setInterval(showTimer, 1000)
+                paused = false
+                running = true
+            }
+
+        }
+        
+        let paused = false
+        function pause(){
+            if (paused){
+                interval = setInterval(showTimer, 1000)
+                paused = false
+            } else {
+                clearInterval(interval)
+                paused = true
+            }
+            
+        }
+
+        let date = new Date(0, 0, 0, 0, 0, -1, 0)
+        function reset(){
+            date = new Date(0, 0, 0, 0, 0, -1, 0)
+            running = false
+            clearInterval(interval)
+            init()
+        }
+
+        function showTimer(){
+            setSecond()
+            timer_container.textContent = timer()
+        }
+        
+        function setSecond(){
+            date.setSeconds(date.getSeconds() + 1)
+        }
+
+        function timer(){ 
+           let h = format(date.getHours())
+           let m = format(date.getMinutes())
+           let s = format(date.getSeconds())
+
+            return h + ":" + m + ":" + s
+        }
+
+        function format(time){
+            return time < 10 ? "0" + time : time
+        }
+    </script>
+</body>
+</html>
