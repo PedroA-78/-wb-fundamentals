@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer - Exercício II</title>
+    <script src="../Framework/beluga.js"></script>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        .containerHour {
+            width: 500px;
+            height: 250px;
+            border: 3px solid black;
+            padding: 8px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 116px;
+            font-weight: bold;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Timer - Exercício II</h1>
+    <p>Criar um relógio, realizar a construção<br> de uma função que retorne a hora atual no<br> formato hh:mm:ss e mostrar a hora em um div.</p>
+
+    <hr>
+
+    <div class="containerHour"></div>
+    <script>
+        let containerHour = document.querySelector(".containerHour")
+
+        setInterval(showHour, 1000)
+
+        function showHour(){
+            containerHour.innerHTML = currentHour()
+        }
+
+        function currentHour(){
+            let date = new Date()
+            let hour = format(date.getHours())
+            let minutes = format(date.getMinutes())
+            let seconds = format(date.getSeconds())
+            return hour + ":" + minutes + ":" + seconds
+        }
+
+        function format(time) {
+           return time < 10 ? "0" + time : time
+        }
+
+        
+    </script>
+</body>
+</html>
