@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer</title>
+    <script src="../Framework/beluga.js"></script>
+</head>
+<body>
+    <h1>Timer</h1>
+    <!-- setTimeout(fn, ms),  setInterval(fn, ms), clearTimeout(id) e clearInterval(id)-->
+    <p>Resultado no console.</p>
+
+    <hr>
+    
+    <script>
+        let num = 0
+        function sum(){
+            console.log("num: " + ++num);
+
+            if (num >= 5) {
+                clearInterval(interval)
+            }
+        }
+
+        // setTimeout(sum, 2000)
+
+        let interval = (setInterval(sum, 1000))
+    </script>
+</body>
+</html>
