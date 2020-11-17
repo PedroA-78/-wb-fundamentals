@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --main-color: #63c6ae;
+    --second-color: #242c2c;
+}
+
+/* === AVULSOS === */
+
+body {
+    padding: 0;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* === HEADER === */
+
+.header_home {
+    background-color: var(--main-color);
+    text-transform: uppercase;
+    padding: 1.25rem;
+}
+
+.header_home a {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
+
+/* === HEADER > NAV === */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    background-color: var(--second-color);
+    list-style-type: none;
+    padding: 2rem;
+    border-bottom: 1px dotted #666;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all 250ms ease-in-out;
+}
+
+nav ul li:hover a {
+    color: var(--main-color);
+}
+
+/* === FIRST CONTAINER === */
+
+.fist_container {
+    height: 80vh;
+    background-image: url(/public/assets/01.jpg);
+    background-position: bottom left;
+    background-size: cover;
+
+    padding: 1.25rem 1.75rem 0;
+
+    position: relative;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_first {
+    color: white;
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    padding: 1.875rem;
+}
+
+.description_first {
+    color: white;
+    background-color: var(--second-color);
+    padding: 1.5rem;
+}
+
+.button_first {
+    margin-top: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    padding: 1.5rem 2rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #999;
+    border-radius: 0.5rem;
+    outline: none;
+    text-decoration: none;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 0;
+    margin: -0.31rem;
+}
+
+/* === SECOND CONTAINER === */
+
+.second_container {
+    margin: 2.5rem 1rem ;
+}
+
+/* === SECOND CONTAINER > CARDS === */
+
+.card_second {
+    margin-top: 1.5rem;
+    border: 0.375rem solid transparent;
+    transition: all 200ms ease-in-out;
+}
+
+.bg_imgs_second img {
+    width: 100%;
+}
+
+.profile_imgs_second {
+    text-align: center;
+}
+
+.profile_imgs_second img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 0.375rem solid white;
+    margin: -3.75rem 0 -1.25rem 0;
+    transition: all 150ms ease-in-out;
+}
+
+.card_people_content {
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.title_second h2{
+    font-weight: 400;
+    color: #555;
+    transition: all 200ms ease-in-out;
+}
+
+.description_second p {
+    font-size: 0.875rem;
+    color: #777;
+    transition: all 200ms ease-in-out;
+}
+
+.card_second:hover,
+.card_second:hover .profile_imgs_second img {
+    border: 0.375rem solid var(--main-color);
+}
+
+.card_second:hover .title_second h2, 
+.card_second:hover .description_second p {
+    color: var(--main-color);
+}
+
+/* === THIRD CONTAINER === */
+
+.third_container {
+    background-color: #f8f9f9;
+    border-top: 1px solid #999;
+    padding: 5rem 1.25rem;
+}
+
+/* === THIRD CONTAINER > FIRST CONTAINER === */
+
+.first_content h3 {
+    font-weight: 400;
+    color: #555;
+}
+
+.first_content p {
+    color: #777;
+    font-size: 0.875rem;
+
+}
+
+.first_content button {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 0.25rem;
+    outline: none;
+}
+
+/* === THIRD CONTAINER > SECOND CONTAINER === */
+
+.second_content {
+    margin-top: 5rem;
+}
+
+.second_content h3 {
+    font-weight: 400;
+    color: #555;
+}
+
+.second_content p {
+    color: #777;
+    font-size: 0.875rem;
+}
+
+/* === FOURTH CONTAINER === */
+
+.fourth_container h3 {
+    background-color: var(--main-color);
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 1.25rem;
+    margin: 0;
+}
+
+/* === FOURTH CONTAINER > CARDS=== */
+
+.card_fourth img {
+    display: block;
+    width: 100%;
+}
+
+
+
+/* === FOOTER === */
+
+footer {
+    background-color: var(--second-color);
+    padding: 4em 0;
+}
+
+footer h4 {
+    text-transform: uppercase;
+    color: #454e51;
+    margin: 0 0.875rem;
+}
+
+footer p {
+    color: #454e51;
+    margin: 1rem 0.875rem;
+}
+
+.useful_links ul {
+    margin: 0;
+}
+
+.useful_links ul li {
+    list-style-type: none;
+    margin: 0.875rem;
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+.useful_links ul li a {
+    color: #454e51;
+    text-decoration: none;
+}
