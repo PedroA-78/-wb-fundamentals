@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Object Model</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        header {
+            background-color: blueviolet;
+            height: 15em;
+            transition: all 200ms ease-in-out;
+        }
+
+        .fx {
+            background-color: darkblue;
+            height: 30em;
+        }
+
+        #p {
+            width: 60%;
+            margin: 2em auto;
+            font-size: 22px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Browser Object Model</h1>
+
+    <hr>
+
+    <header></header>
+
+    <p id="p">Sapien ipsum consequat habitasse massa ultrices nec habitasse ultricies, elit tortor non nibh quis donec suscipit inceptos, dictumst tempor adipiscing ultrices laoreet vestibulum rutrum. vivamus senectus porta cursus tortor ornare class lorem integer primis orci sem vivamus eget, quam vehicula eget euismod luctus eros imperdiet etiam lectus commodo primis inceptos. mi nec facilisis nisl aliquet habitasse eu blandit in rutrum, nullam eu massa etiam scelerisque diam rutrum quisque facilisis, tempus nisi bibendum litora aenean hac proin primis. curae tristique facilisis sollicitudin senectus felis dictumst dapibus, consectetur hendrerit suspendisse pretium ut imperdiet dui, turpis rutrum nam consequat tincidunt pulvinar. Viverra rutrum aliquam morbi orci eleifend ante curabitur class, eleifend ac phasellus euismod commodo ad maecenas cursus, venenatis vehicula purus habitasse quisque cubilia feugiat. praesent magna hendrerit id mi integer quisque, massa viverra phasellus est lobortis, eget posuere tempus aenean dapibus. iaculis convallis dictum non duis ultricies elit rutrum vel dolor, bibendum scelerisque aliquet vestibulum aptent aenean integer eros, senectus convallis eleifend taciti tempus scelerisque integer quisque. felis nisl proin ligula sem dictum scelerisque varius, vivamus purus inceptos congue tempus accumsan. commodo id convallis felis pulvinar vitae, quam mi tristique fames nec sagittis, tristique venenatis placerat ipsum. Cras augue urna etiam cubilia aliquet lorem euismod lobortis, duis vehicula accumsan netus suscipit semper lobortis, porta turpis interdum vitae proin mauris aliquam. integer tellus hac mauris potenti cras felis eget risus sem neque posuere, litora hendrerit viverra adipiscing metus sed nisi eros cras facilisis aliquam mauris, venenatis aenean himenaeos nunc gravida aenean donec felis tincidunt taciti. tristique facilisis placerat nibh ad laoreet quam quisque, habitasse etiam quis aliquam quis ut nostra, imperdiet fringilla auctor rhoncus consectetur feugiat. purus eros tortor felis auctor aenean pharetra per nulla cursus aenean metus, amet quam mauris aliquam primis aenean integer curae nisl sodales potenti, bibendum mauris odio maecenas conubia auctor magna aliquam a integer. Tellus per semper magna facilisis nam consectetur placerat vehicula rhoncus nibh, tincidunt arcu dictum aliquet litora potenti diam imperdiet libero sagittis, libero vivamus ac fringilla donec commodo vitae mattis ad. amet convallis consectetur non ut venenatis conubia praesent himenaeos eu sagittis enim, tristique mattis pulvinar proin convallis fusce eleifend aenean quis fringilla fermentum, aliquam lacinia per vivamus interdum tristique fringilla per ad posuere. sodales elementum aliquam purus imperdiet per semper lectus dapibus taciti primis, mattis vulputate sapien phasellus quisque commodo odio nisi tincidunt iaculis, suscipit maecenas cubilia praesent lacinia sed sociosqu aliquet nibh. Augue potenti euismod mauris leo senectus eleifend placerat mollis urna duis, euismod tellus dictumst posuere diam fringilla mi laoreet tellus, habitant consectetur sagittis risus netus sociosqu lacus pellentesque aptent. aliquet nam mi egestas quis sem accumsan turpis massa tempus, sapien aliquam sed lectus fringilla nulla facilisis etiam, fermentum velit ligula sit non etiam varius tortor. pharetra interdum at vehicula iaculis proin fringilla arcu nec, cubilia dictumst aptent quisque adipiscing semper scelerisque. sit conubia auctor rutrum fusce dolor pharetra tellus, eu maecenas dictumst curae sem nunc condimentum non, vulputate eleifend donec sollicitudin nostra fames. Ac primis interdum fringilla himenaeos, porta molestie himenaeos. Ad vel porttitor aliquet suspendisse ultrices adipiscing nisi per interdum consequat curabitur, tempus massa rhoncus donec viverra consectetur potenti libero ultrices pretium. ultrices rhoncus hendrerit risus dui bibendum eget a dictum tincidunt senectus, tellus massa conubia erat semper condimentum non eu ut sociosqu vitae, in mollis primis orci nullam feugiat luctus urna sodales. ac elementum nostra justo nec nam tincidunt cubilia, adipiscing suscipit non ligula aenean purus rhoncus rutrum, egestas aliquet eleifend porttitor velit quisque. viverra venenatis phasellus iaculis fermentum turpis euismod eget fermentum eros, augue donec sit molestie ligula nisi cursus dapibus tristique, netus proin id curabitur malesuada odio semper orci. Vivamus facilisis torquent quisque orci et litora habitasse viverra, nisi pellentesque nisl ornare ullamcorper risus eleifend leo risus, dolor mattis dictum malesuada ornare hendrerit tempus. suscipit commodo nisl imperdiet volutpat feugiat cursus, vivamus netus vehicula ligula duis senectus, molestie sollicitudin eros etiam nisl. phasellus sed aptent id turpis curabitur tempor mauris ligula hac, pharetra velit imperdiet purus mauris varius bibendum consequat aenean cursus, lobortis fringilla curabitur nibh senectus metus est malesuada. condimentum nibh lobortis viverra auctor aenean mi senectus curabitur, rhoncus curabitur bibendum habitant malesuada arcu nisl interdum etiam, id tempus id dictumst aenean varius egestas. Pharetra varius egestas posuere lacinia nunc molestie bibendum sit, quis nullam neque eleifend amet ligula metus, urna consectetur adipiscing curabitur justo sodales arcu. donec aliquam tincidunt sit tortor massa nec eu etiam pellentesque taciti ultrices, rhoncus ullamcorper donec quisque hac odio imperdiet velit varius condimentum, aliquam aenean eros vitae cubilia potenti volutpat suspendisse aliquam nunc. commodo eleifend feugiat quisque a egestas sem ad felis, faucibus habitasse erat sagittis nibh egestas fermentum taciti tincidunt, sem felis maecenas lobortis in odio sapien. non suspendisse rhoncus rutrum pulvinar leo nostra mattis vivamus ac aliquam, cursus nisl suscipit nostra aliquam porta nibh sem nam fringilla, tellus odio eu aliquet et posuere pulvinar ultrices iaculis. Pulvinar maecenas mollis elementum cras rutrum urna praesent diam phasellus, sem integer leo hendrerit interdum feugiat imperdiet euismod ligula, dictum et pellentesque turpis elit nisl dui rhoncus. lectus suspendisse habitant gravida habitasse viverra fames lacus nullam, ullamcorper dolor imperdiet morbi eros a feugiat, class nisl elementum eget molestie quam at torquent, condimentum consequat eget auctor id ornare. laoreet quis senectus consectetur aliquam cras ut dapibus, ultrices dapibus donec neque vulputate neque, torquent potenti tortor sodales erat primis. netus nibh aenean fames tortor molestie tristique felis sapien, aliquam class viverra fames interdum gravida congue id, tortor elit fermentum habitant at commodo enim. Augue suscipit viverra felis tempus rutrum est sapien class, vel hac vel bibendum dapibus tempor consectetur metus fermentum, viverra aliquam potenti sem class praesent primis. eu interdum himenaeos tellus amet ornare quam, consequat class ullamcorper class dictum, dui a enim porta donec. ornare laoreet class eros inceptos posuere vitae lobortis, dictum dapibus dictum quisque praesent est pretium, est iaculis etiam nibh fusce convallis sed, nullam elementum dolor integer conubia urna. curae dictum placerat suspendisse nibh luctus non nec, hac lobortis potenti viverra sed suscipit tellus, varius at accumsan aenean class mollis.</p>
+
+    <script>
+        let header = document.querySelector("header")
+        window.addEventListener("scroll", scrolled)
+
+        function scrolled(){
+            let posYScroll = getYscrool()
+
+            if (posYScroll > 150 && !hasClassfx()) {
+                header.classList.add("fx")
+            } 
+            
+            if (posYScroll < 150 && hasClassfx()) {
+                header.classList.remove("fx")
+            }
+        }
+
+        function getYscrool(){
+            return window.pageYOffset
+        }
+
+        function hasClassfx(){
+            return !!document.querySelector(".fx")
+        }
+    </script>
+
+</body>
+</html>
