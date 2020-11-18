@@ -37,7 +37,6 @@ nav ul {
 nav ul li {
     background-color: var(--second-color);
     list-style-type: none;
-    padding: 2rem;
     border-bottom: 1px dotted #666;
     text-align: center;
 }
@@ -45,12 +44,14 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #666;
+    display: block;
+    padding: 2rem;
     text-transform: uppercase;
     font-weight: 700;
     transition: all 250ms ease-in-out;
 }
 
-nav ul li:hover a {
+nav ul li a:hover {
     color: var(--main-color);
 }
 
@@ -58,9 +59,10 @@ nav ul li:hover a {
 
 .fist_container {
     height: 80vh;
-    background-image: url(/public/assets/01.jpg);
-    background-position: bottom left;
-    background-size: cover;
+    background-image: linear-gradient(45deg, white 50%, transparent 50%), linear-gradient(-45deg, white 50%, transparent 50%), url(/public/assets/01.jpg);
+    background-position: left calc(50% + 20px) bottom, left calc(50% - 20px) bottom, bottom left;
+    background-size: 40px 40px, 40px 40px, cover;
+    background-repeat: no-repeat;
 
     padding: 1.25rem 1.75rem 0;
 
@@ -97,9 +99,17 @@ nav ul li:hover a {
     border-radius: 0.5rem;
     outline: none;
     text-decoration: none;
+    transition: all 200ms ease-in-out;
+}
+
+.button_first:hover {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .arrow {
+    display: none;
     position: absolute;
     bottom: 0;
     margin: -0.31rem;
@@ -184,7 +194,7 @@ nav ul li:hover a {
 
 }
 
-.first_content button {
+.button_third {
     color: white;
     text-transform: uppercase;
     font-weight: 700;
@@ -193,6 +203,12 @@ nav ul li:hover a {
     border: none;
     border-radius: 0.25rem;
     outline: none;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.button_third:hover {
+    background-color: rgba(99, 198, 174, 0.85);
 }
 
 /* === THIRD CONTAINER > SECOND CONTAINER === */
@@ -223,6 +239,12 @@ nav ul li:hover a {
 }
 
 /* === FOURTH CONTAINER > CARDS=== */
+
+.cards_fourth {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
 
 .card_fourth img {
     display: block;
