@@ -420,8 +420,9 @@ footer p {
     
     .button_third {
         position: absolute;
-        bottom: 0.875rem;
+        bottom: 0;
         left: 0;
+        margin: 0.875rem 0;
     }
     
     /* === THIRD CONTAINER > SECOND CONTAINER === */
@@ -435,9 +436,7 @@ footer p {
     /* === FOURTH CONTAINER > CARDS=== */
 
     .cards_fourth {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 0;
     }
 
     /* === FIFTH CONTAINER === */
@@ -495,4 +494,38 @@ footer p {
         margin: 0;
     }
 
+}
+
+@media screen and (min-width: 62.5rem) {
+    /* === FOURTH CONTAINER === */
+
+    /* === FOURTH CONTAINER > CARDS=== */
+
+    .cards_fourth {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    /* === FIFTH CONTAINER === */
+
+    /* === FIFTH CONTAINER > SLIDESHOW_CONTAINER === */
+
+    .img_slide_container {
+        width: 830px;
+        height: 503px;
+    }
+
+    .img_slide_container img {
+        width: 830px;
+        height: 503px;
+    }
+
+    @keyframes slide_notebook {
+        0%, 47%, 100% {
+            transform: translateX(0);
+        }
+
+        50%, 97% {
+            transform: translateX(-830px);
+        }
+    }
 }
