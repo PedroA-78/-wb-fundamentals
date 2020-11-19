@@ -474,24 +474,37 @@ footer p {
         margin-top: 0;
     }
 
-    .card_comments:last-child {
-        display: none;
-    }
-
     /* === FOOTER === */
 
-    footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+     footer {
+        padding: 4rem 8rem;
     }
 
+    /*
     footer p {
         color: #454e51;
         margin: 0 0.875rem 1rem;
     }
 
+    */
+
+    .useful_links ul {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
     .useful_links ul li {
-        margin: 0;
+        flex-basis: 0;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .useful_links ul li a {
+        display: block;
+        padding: 1rem 2rem;
     }
 
 }
@@ -527,5 +540,61 @@ footer p {
         50%, 97% {
             transform: translateX(-830px);
         }
+    }
+}
+
+@media screen and (min-width:74rem) {
+    /* === HEADER > NAV === */
+
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    /* === SECOND CONTAINER === */
+
+    /* === SECOND CONTAINER > CARDS === */
+
+    .cards_second {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 0 6rem;
+    }
+
+    /* === SECOND CONTAINER > CARDS === */
+
+    .title_second h2{
+        font-size: 1.75rem;
+    }
+
+    .description_second p {
+        font-size: 1rem;
+    }
+
+    /* === THIRD CONTAINER === */
+
+    .third_container {
+        padding: 5rem 6rem;
+        gap: 1.5rem;
+    }
+
+    /* === FOURTH CONTAINER === */
+
+    /* === FOURTH CONTAINER > CARDS=== */
+
+    .cards_fourth {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    /* === FIFTH CONTAINER === */
+
+    /* === FIFTH CONTAINER > CARDS_COMMENTS === */
+
+    .cards_comments {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card_comments {
+        margin-top: 0;
     }
 }
