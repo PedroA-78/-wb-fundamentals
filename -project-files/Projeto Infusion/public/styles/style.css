@@ -251,17 +251,29 @@ nav ul li a:hover {
     width: 100%;
 }
 
-/* .card_fourth img::before {
+.card_fourth {
+    position: relative;
+}
+
+.card_fourth::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
-    background-color: black;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    z-index: 10;
-} */
+}
+
+.card_fourth:hover::before {
+    content: "";
+    position: unset;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: unset; 
+}
 
 /* === FIFTH CONTAINER === */
 
