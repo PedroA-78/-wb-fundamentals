@@ -323,15 +323,9 @@ nav ul li a:hover {
 .cards_comments {
     padding: 3.125rem 0;
     background-color: var(--main-color);
-}
-
-.comments_container {
-    width: 100%;
 
     display: grid;
     grid-template-columns: 1fr;
-
-    overflow: auto;
 }
 
 .card_comments:nth-child(1) {
@@ -395,4 +389,110 @@ footer p {
 .useful_links ul li a {
     color: #454e51;
     text-decoration: none;
+}
+
+/* RESPONSIVE CSS */
+
+@media screen and (min-width: 50.25rem) {
+    
+    /* === SECOND CONTAINER === */
+
+    /* === SECOND CONTAINER > CARDS === */
+
+    .cards_second {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+
+    /* === THIRD CONTAINER === */
+
+    .third_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+
+    /* === THIRD CONTAINER > FIRST CONTAINER === */
+    .first_content {
+        position: relative;
+    }
+    
+    .button_third {
+        position: absolute;
+        bottom: 0.875rem;
+        left: 0;
+    }
+    
+    /* === THIRD CONTAINER > SECOND CONTAINER === */
+    
+    .second_content {
+        margin-top: 0;
+    }
+
+    /* === FOURTH CONTAINER === */
+
+    /* === FOURTH CONTAINER > CARDS=== */
+
+    .cards_fourth {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0;
+    }
+
+    /* === FIFTH CONTAINER === */
+
+    /* === FIFTH CONTAINER > SLIDESHOW_CONTAINER === */
+
+    .img_slide_container {
+        width: 700px;
+        height: 446px;
+    }
+
+    .img_slide_container img {
+        width: 700px;
+        height: 446px;
+    }
+
+    @keyframes slide_notebook {
+        0%, 47%, 100% {
+            transform: translateX(0);
+        }
+
+        50%, 97% {
+            transform: translateX(-700px);
+        }
+    }
+
+    /* === FIFTH CONTAINER > CARDS_COMMENTS === */
+
+    .cards_comments {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card_comments {
+        margin-top: 0;
+    }
+
+    .card_comments:last-child {
+        display: none;
+    }
+
+    /* === FOOTER === */
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    footer p {
+        color: #454e51;
+        margin: 0 0.875rem 1rem;
+    }
+
+    .useful_links ul li {
+        margin: 0;
+    }
+
 }
