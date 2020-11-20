@@ -15,19 +15,52 @@ body {
 
 /* === HEADER === */
 
+/* header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+} */
+
 .header_home {
     background-color: var(--main-color);
     text-transform: uppercase;
     padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .header_home a {
     text-decoration: none;
     font-weight: 700;
     color: white;
+    font-size: 2rem;
+}
+
+.btn_menu {
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    right: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.no_js .btn_menu {
+    display: none;
 }
 
 /* === HEADER > NAV === */
+
+.js_on nav {
+    height: 0;
+    overflow: hidden;
+    transition: all 500ms;
+}
+
+nav.open_menu {
+    height: 498px;
+}
 
 nav ul {
     margin: 0;
@@ -142,7 +175,7 @@ nav ul li a:hover {
     height: 7rem;
     border-radius: 50%;
     border: 0.375rem solid white;
-    margin: -3.75rem 0 -1.25rem 0;
+    margin: -3.6875rem 0 -1.25rem 0;
     transition: all 150ms ease-in-out;
 }
 
@@ -320,10 +353,16 @@ nav ul li a:hover {
 
 /* === FIFTH CONTAINER > CARDS_COMMENTS === */
 
-.cards_comments {
+.comments_container {
     padding: 3.125rem 0;
     background-color: var(--main-color);
+}
 
+.arrow_left, .arrow_right {
+    display: none;
+}
+
+.cards_comments {
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -370,7 +409,7 @@ footer h4 {
     margin: 0 0.875rem;
 }
 
-footer p {
+.decricao_footer p {
     color: #454e51;
     margin: 1rem 0.875rem;
 }
@@ -478,27 +517,21 @@ footer p {
 
      footer {
         padding: 4rem 8rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
-    /*
-    footer p {
-        color: #454e51;
+    .decricao_footer p {
         margin: 0 0.875rem 1rem;
     }
 
-    */
-
     .useful_links ul {
         padding: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        margin: 0;
     }
 
     .useful_links ul li {
-        flex-basis: 0;
-        flex-grow: 1;
+        margin: 0;
         text-align: center;
     }
 
@@ -551,6 +584,10 @@ footer p {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
+    nav.open_menu {
+        height: 83px;
+    }
+
     /* === SECOND CONTAINER === */
 
     /* === SECOND CONTAINER > CARDS === */
@@ -575,6 +612,13 @@ footer p {
     .third_container {
         padding: 5rem 6rem;
         gap: 1.5rem;
+        box-sizing: border-box;
+    }
+
+    .first_content, .second_content {
+        max-width: 52rem;
+        margin: 0 auto;
+        
     }
 
     /* === FOURTH CONTAINER === */
@@ -595,6 +639,94 @@ footer p {
     }
 
     .card_comments {
-        margin-top: 0;
+        max-width: 18.75rem;
+        margin: 0 auto;
     }
+
+    /* === FIFTH CONTAINER > CARDS_COMMENTS(JS_ON) === */
+
+    .js_on .comments_container {
+        height: 550px;
+        padding: 3.125rem 0;
+        background-color: var(--main-color);
+        position: relative;
+    }
+
+    .js_on .arrow_left,
+    .js_on .arrow_right {
+        background-color: transparent;
+        border: none;
+        height: 115px;
+        width: 115px;
+        padding: 0;
+        outline: none;
+        display: inline;
+        position: absolute;
+        top: 50%;
+    }
+
+    .js_on .arrow_left {
+        transform: translate(50%, -50%);
+    }
+
+    .js_on .arrow_right {
+        right: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    .js_on .arrow_left span, 
+    .js_on .arrow_right span {
+        font-size: 115px;
+        color: white;
+    }
+
+    .js_on .cards_comments {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .js_on .card_comments:nth-child(1),
+    .js_on .card_comments:nth-child(2),
+    .js_on .card_comments:nth-child(3),
+    .js_on .card_comments:nth-child(4),
+    .js_on .card_comments:nth-child(5),
+    .js_on .card_comments:nth-child(6) {
+        display: none;
+        opacity: 0;
+    }
+
+    .js_on .card_comments.show {
+        display: block;
+        animation: show 800ms linear forwards;
+    }
+
+    @keyframes show {
+        0% {
+            display: none;
+            opacity: 0;
+        }
+
+        1% {
+            display: block;
+            opacity: 0;
+        }
+
+        100% {
+            display: block;
+            opacity: 1;
+        }
+    }
+
+
+
+    /* .card_comments:nth-child(2),
+    .card_comments:nth-child(3),
+    .card_comments:nth-child(4),
+    .card_comments:nth-child(5),
+    .card_comments:nth-child(6) {
+        display: none;
+    } */
 }
